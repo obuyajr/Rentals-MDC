@@ -36,26 +36,30 @@ Public Class Form1
 
             ' Check if any rows are returned from the query
             If dt.Rows.Count > 0 Then
+
                 ' If there are rows, display a success message with the user type
                 MessageBox.Show("You are logged in as " & dt.Rows(0)("usertype").ToString())
 
                 ' Based on the selected user type, show the appropriate form
                 If combo_utype.SelectedIndex = 0 Then
+
                     ' If user type is "User", create an instance of the User form and show it
                     Dim userForm As New user_dashbord()
                     userForm.Show()
+
                 Else
 
                     ' If user type is "Admin", create an instance of the Admin form and show it
                     Dim adminForm As New admin_dashboard()
                     adminForm.Show()
+
                 End If
 
                 ' Hide the current form
                 Me.Hide()
+
             Else
                 ' If no rows are returned, display an error message
-
                 MessageBox.Show("Incorrect DETAILS!! .", "WRONG DETAILS", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
 
@@ -78,6 +82,15 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub txt_uname_TextChanged(sender As Object, e As EventArgs) Handles txt_uname.TextChanged
+        txt_uname.CharacterCasing = CharacterCasing.Upper
+
+    End Sub
+
+    Private Sub txt_pwd_TextChanged(sender As Object, e As EventArgs) Handles txt_pwd.TextChanged
 
     End Sub
 End Class

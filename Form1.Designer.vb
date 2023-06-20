@@ -154,13 +154,14 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
+        Button1.BackColor = Color.FloralWhite
         Button1.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.Location = New Point(131, 40)
+        Button1.Location = New Point(152, 35)
         Button1.Name = "Button1"
-        Button1.Size = New Size(144, 45)
+        Button1.Size = New Size(144, 36)
         Button1.TabIndex = 0
         Button1.Text = "Login"
-        Button1.UseVisualStyleBackColor = True
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' Form1
         ' 
@@ -170,6 +171,7 @@ Partial Class Form1
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"

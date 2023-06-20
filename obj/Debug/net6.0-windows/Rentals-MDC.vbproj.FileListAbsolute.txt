@@ -25,3 +25,6 @@ C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\runt
 C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.vbproj.CopyComplete
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\Rentals-MDC.dll.config
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.editHouse.resources
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.newHouse.resources
