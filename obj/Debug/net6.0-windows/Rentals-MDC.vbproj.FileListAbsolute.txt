@@ -1,0 +1,17 @@
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\Rentals-MDC.exe
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\Rentals-MDC.deps.json
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\Rentals-MDC.runtimeconfig.json
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\Rentals-MDC.dll
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\Rentals-MDC.pdb
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.vbproj.AssemblyReference.cache
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.Form1.resources
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.vbproj.GenerateResource.cache
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.AssemblyInfoInputs.cache
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.AssemblyInfo.vb
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.vbproj.CoreCompileInputs.cache
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.dll
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\refint\Rentals-MDC.dll
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.pdb
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals-MDC.genruntimeconfig.cache
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\ref\Rentals-MDC.dll
