@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class newHouse
+Partial Class newTenant
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,33 +22,17 @@ Partial Class newHouse
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Button1 = New Button()
         SuspendLayout()
         ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(275, 510)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(169, 31)
-        Button1.TabIndex = 0
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' newHouse
+        ' newTenant
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        AutoSize = True
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(823, 568)
-        Controls.Add(Button1)
+        ClientSize = New Size(800, 450)
         FormBorderStyle = FormBorderStyle.None
-        Name = "newHouse"
-        StartPosition = FormStartPosition.Manual
-        Text = "newHouse"
-        WindowState = FormWindowState.Maximized
+        Name = "newTenant"
+        Text = "newTenant"
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents Button1 As Button
 End Class

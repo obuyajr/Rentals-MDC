@@ -38,7 +38,7 @@ Partial Class editHouse
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.White
+        BackColor = Color.WhiteSmoke
         ClientSize = New Size(823, 568)
         Controls.Add(Button1)
         FormBorderStyle = FormBorderStyle.None

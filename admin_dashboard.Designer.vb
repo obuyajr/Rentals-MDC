@@ -23,19 +23,23 @@ Partial Class admin_dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Button1 = New Button()
         Button6 = New Button()
         Button5 = New Button()
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
         Panel2 = New Panel()
-        Button1 = New Button()
+        Button7 = New Button()
+        Button8 = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.Indigo
+        Panel1.Controls.Add(Button8)
+        Panel1.Controls.Add(Button7)
         Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(Button6)
         Panel1.Controls.Add(Button5)
@@ -45,8 +49,25 @@ Partial Class admin_dashboard
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(149, 568)
+        Panel1.Size = New Size(131, 568)
         Panel1.TabIndex = 0
+        ' 
+        ' Button1
+        ' 
+        Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Button1.FlatAppearance.BorderColor = Color.Indigo
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Image = My.Resources.Resources.close
+        Button1.ImageAlign = ContentAlignment.MiddleRight
+        Button1.Location = New Point(12, 516)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(89, 40)
+        Button1.TabIndex = 6
+        Button1.Text = "EXIT"
+        Button1.TextAlign = ContentAlignment.MiddleLeft
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' Button6
         ' 
@@ -54,11 +75,14 @@ Partial Class admin_dashboard
         Button6.FlatStyle = FlatStyle.Flat
         Button6.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Button6.ForeColor = Color.White
-        Button6.Location = New Point(12, 194)
+        Button6.Image = My.Resources.Resources.category_alt_solid_24
+        Button6.ImageAlign = ContentAlignment.MiddleRight
+        Button6.Location = New Point(3, 204)
         Button6.Name = "Button6"
-        Button6.Size = New Size(131, 40)
+        Button6.Size = New Size(128, 40)
         Button6.TabIndex = 5
-        Button6.Text = "Button6"
+        Button6.Text = "House Cat."
+        Button6.TextAlign = ContentAlignment.MiddleLeft
         Button6.UseVisualStyleBackColor = True
         ' 
         ' Button5
@@ -67,11 +91,14 @@ Partial Class admin_dashboard
         Button5.FlatStyle = FlatStyle.Flat
         Button5.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Button5.ForeColor = Color.White
-        Button5.Location = New Point(12, 155)
+        Button5.Image = My.Resources.Resources.edit_regular_24
+        Button5.ImageAlign = ContentAlignment.MiddleRight
+        Button5.Location = New Point(3, 158)
         Button5.Name = "Button5"
-        Button5.Size = New Size(131, 40)
+        Button5.Size = New Size(128, 40)
         Button5.TabIndex = 4
-        Button5.Text = "Button5"
+        Button5.Text = "Edit Tenant"
+        Button5.TextAlign = ContentAlignment.MiddleLeft
         Button5.UseVisualStyleBackColor = True
         ' 
         ' Button4
@@ -80,11 +107,14 @@ Partial Class admin_dashboard
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(12, 126)
+        Button4.Image = My.Resources.Resources.user_plus_regular_24
+        Button4.ImageAlign = ContentAlignment.MiddleRight
+        Button4.Location = New Point(3, 122)
         Button4.Name = "Button4"
-        Button4.Size = New Size(131, 40)
+        Button4.Size = New Size(128, 40)
         Button4.TabIndex = 3
-        Button4.Text = "Button4"
+        Button4.Text = "New Tenant"
+        Button4.TextAlign = ContentAlignment.MiddleLeft
         Button4.UseVisualStyleBackColor = True
         ' 
         ' Button3
@@ -93,11 +123,14 @@ Partial Class admin_dashboard
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Button3.ForeColor = Color.White
+        Button3.Image = My.Resources.Resources.edit_alt_solid_24__1_
+        Button3.ImageAlign = ContentAlignment.MiddleRight
         Button3.Location = New Point(3, 76)
         Button3.Name = "Button3"
-        Button3.Size = New Size(140, 40)
+        Button3.Size = New Size(128, 40)
         Button3.TabIndex = 2
         Button3.Text = "Edit House"
+        Button3.TextAlign = ContentAlignment.MiddleLeft
         Button3.UseVisualStyleBackColor = True
         ' 
         ' Button2
@@ -106,36 +139,58 @@ Partial Class admin_dashboard
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Button2.ForeColor = Color.White
+        Button2.Image = My.Resources.Resources.building_house_solid_24
+        Button2.ImageAlign = ContentAlignment.MiddleRight
         Button2.Location = New Point(3, 37)
         Button2.Name = "Button2"
-        Button2.Size = New Size(143, 40)
+        Button2.Size = New Size(128, 40)
         Button2.TabIndex = 1
         Button2.Text = "New House"
+        Button2.TextAlign = ContentAlignment.MiddleLeft
         Button2.UseVisualStyleBackColor = True
         ' 
         ' Panel2
         ' 
         Panel2.AutoSize = True
-        Panel2.BackColor = Color.IndianRed
+        Panel2.BackColor = Color.WhiteSmoke
         Panel2.BorderStyle = BorderStyle.FixedSingle
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(149, 0)
+        Panel2.Location = New Point(131, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(674, 568)
+        Panel2.Size = New Size(692, 568)
         Panel2.TabIndex = 1
         ' 
-        ' Button1
+        ' Button7
         ' 
-        Button1.FlatAppearance.BorderColor = Color.Indigo
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(12, 516)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(131, 40)
-        Button1.TabIndex = 6
-        Button1.Text = "EXIT"
-        Button1.UseVisualStyleBackColor = True
+        Button7.FlatAppearance.BorderColor = Color.Indigo
+        Button7.FlatStyle = FlatStyle.Flat
+        Button7.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Button7.ForeColor = Color.White
+        Button7.Image = My.Resources.Resources.category_alt_solid_24
+        Button7.ImageAlign = ContentAlignment.MiddleRight
+        Button7.Location = New Point(1, 264)
+        Button7.Name = "Button7"
+        Button7.Size = New Size(128, 40)
+        Button7.TabIndex = 7
+        Button7.Text = "House Cat."
+        Button7.TextAlign = ContentAlignment.MiddleLeft
+        Button7.UseVisualStyleBackColor = True
+        ' 
+        ' Button8
+        ' 
+        Button8.FlatAppearance.BorderColor = Color.Indigo
+        Button8.FlatStyle = FlatStyle.Flat
+        Button8.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Button8.ForeColor = Color.White
+        Button8.Image = My.Resources.Resources.report_solid_24__1_
+        Button8.ImageAlign = ContentAlignment.MiddleRight
+        Button8.Location = New Point(3, 470)
+        Button8.Name = "Button8"
+        Button8.Size = New Size(128, 40)
+        Button8.TabIndex = 8
+        Button8.Text = "Reports"
+        Button8.TextAlign = ContentAlignment.MiddleLeft
+        Button8.UseVisualStyleBackColor = True
         ' 
         ' admin_dashboard
         ' 
@@ -161,4 +216,6 @@ Partial Class admin_dashboard
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button7 As Button
 End Class
