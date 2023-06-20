@@ -38,12 +38,14 @@ Partial Class editHouse
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.MistyRose
-        ClientSize = New Size(800, 450)
+        BackColor = Color.White
+        ClientSize = New Size(823, 568)
         Controls.Add(Button1)
         FormBorderStyle = FormBorderStyle.None
         Name = "editHouse"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "editHouse"
+        WindowState = FormWindowState.Maximized
         ResumeLayout(False)
     End Sub
 

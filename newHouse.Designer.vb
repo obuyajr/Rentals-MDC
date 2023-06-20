@@ -27,9 +27,9 @@ Partial Class newHouse
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(226, 375)
+        Button1.Location = New Point(12, 12)
         Button1.Name = "Button1"
-        Button1.Size = New Size(169, 23)
+        Button1.Size = New Size(169, 198)
         Button1.TabIndex = 0
         Button1.Text = "Button1"
         Button1.UseVisualStyleBackColor = True
@@ -38,12 +38,15 @@ Partial Class newHouse
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Linen
-        ClientSize = New Size(800, 450)
+        AutoSize = True
+        BackColor = Color.White
+        ClientSize = New Size(823, 568)
         Controls.Add(Button1)
         FormBorderStyle = FormBorderStyle.None
         Name = "newHouse"
+        StartPosition = FormStartPosition.Manual
         Text = "newHouse"
+        WindowState = FormWindowState.Maximized
         ResumeLayout(False)
     End Sub
 
