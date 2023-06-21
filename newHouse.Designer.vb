@@ -24,6 +24,8 @@ Partial Class newHouse
     Private Sub InitializeComponent()
         Button1 = New Button()
         Panel1 = New Panel()
+        Panel3 = New Panel()
+        DataGridView1 = New DataGridView()
         combo_category = New ComboBox()
         txt_rent = New TextBox()
         txt_deposit = New TextBox()
@@ -39,7 +41,11 @@ Partial Class newHouse
         MenuStrip1 = New MenuStrip()
         AdditionalRunningsToolStripMenuItem = New ToolStripMenuItem()
         AddCategoryOfHousesToolStripMenuItem = New ToolStripMenuItem()
+        combo_status = New ComboBox()
+        Label3 = New Label()
         Panel1.SuspendLayout()
+        Panel3.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         MenuStrip1.SuspendLayout()
         SuspendLayout()
@@ -60,6 +66,9 @@ Partial Class newHouse
         Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Panel1.BackColor = Color.WhiteSmoke
         Panel1.BorderStyle = BorderStyle.Fixed3D
+        Panel1.Controls.Add(combo_status)
+        Panel1.Controls.Add(Label3)
+        Panel1.Controls.Add(Panel3)
         Panel1.Controls.Add(combo_category)
         Panel1.Controls.Add(txt_rent)
         Panel1.Controls.Add(txt_deposit)
@@ -75,12 +84,37 @@ Partial Class newHouse
         Panel1.Size = New Size(820, 400)
         Panel1.TabIndex = 1
         ' 
+        ' Panel3
+        ' 
+        Panel3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Panel3.BackColor = Color.White
+        Panel3.BorderStyle = BorderStyle.Fixed3D
+        Panel3.Controls.Add(DataGridView1)
+        Panel3.Location = New Point(433, 3)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(380, 390)
+        Panel3.TabIndex = 13
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.AllowUserToAddRows = False
+        DataGridView1.AllowUserToDeleteRows = False
+        DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(8, 16)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.ReadOnly = True
+        DataGridView1.RowTemplate.Height = 25
+        DataGridView1.Size = New Size(364, 367)
+        DataGridView1.TabIndex = 0
+        ' 
         ' combo_category
         ' 
+        combo_category.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         combo_category.FormattingEnabled = True
         combo_category.Location = New Point(210, 186)
         combo_category.Name = "combo_category"
-        combo_category.Size = New Size(133, 23)
+        combo_category.Size = New Size(133, 25)
         combo_category.TabIndex = 12
         ' 
         ' txt_rent
@@ -212,6 +246,26 @@ Partial Class newHouse
         AddCategoryOfHousesToolStripMenuItem.Size = New Size(221, 22)
         AddCategoryOfHousesToolStripMenuItem.Text = "Add Category of Houses"
         ' 
+        ' combo_status
+        ' 
+        combo_status.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        combo_status.FormattingEnabled = True
+        combo_status.Items.AddRange(New Object() {"AVAILABLE"})
+        combo_status.Location = New Point(210, 331)
+        combo_status.Name = "combo_status"
+        combo_status.Size = New Size(133, 25)
+        combo_status.TabIndex = 15
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(105, 339)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(46, 17)
+        Label3.TabIndex = 14
+        Label3.Text = "Status"
+        ' 
         ' newHouse
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -230,6 +284,8 @@ Partial Class newHouse
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel3.ResumeLayout(False)
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
@@ -254,4 +310,8 @@ Partial Class newHouse
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents AdditionalRunningsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddCategoryOfHousesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents combo_status As ComboBox
+    Friend WithEvents Label3 As Label
 End Class
