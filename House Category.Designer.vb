@@ -23,10 +23,10 @@ Partial Class House_Category
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        TextBox1 = New TextBox()
+        txt_category = New TextBox()
         Label2 = New Label()
         Label1 = New Label()
-        Button1 = New Button()
+        btn_addCategory = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -34,22 +34,22 @@ Partial Class House_Category
         ' 
         Panel1.BackColor = Color.MistyRose
         Panel1.BorderStyle = BorderStyle.Fixed3D
-        Panel1.Controls.Add(TextBox1)
+        Panel1.Controls.Add(txt_category)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Label1)
-        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(btn_addCategory)
         Panel1.Location = New Point(1, 2)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(526, 135)
         Panel1.TabIndex = 0
         ' 
-        ' TextBox1
+        ' txt_category
         ' 
-        TextBox1.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox1.Location = New Point(110, 50)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(221, 28)
-        TextBox1.TabIndex = 3
+        txt_category.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_category.Location = New Point(110, 50)
+        txt_category.Name = "txt_category"
+        txt_category.Size = New Size(221, 28)
+        txt_category.TabIndex = 3
         ' 
         ' Label2
         ' 
@@ -70,15 +70,15 @@ Partial Class House_Category
         Label1.TabIndex = 1
         Label1.Text = "Category "
         ' 
-        ' Button1
+        ' btn_addCategory
         ' 
-        Button1.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.Location = New Point(384, 50)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(92, 28)
-        Button1.TabIndex = 0
-        Button1.Text = "Add"
-        Button1.UseVisualStyleBackColor = True
+        btn_addCategory.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btn_addCategory.Location = New Point(384, 50)
+        btn_addCategory.Name = "btn_addCategory"
+        btn_addCategory.Size = New Size(92, 28)
+        btn_addCategory.TabIndex = 0
+        btn_addCategory.Text = "Add"
+        btn_addCategory.UseVisualStyleBackColor = True
         ' 
         ' House_Category
         ' 
@@ -98,8 +98,8 @@ Partial Class House_Category
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_category As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_addCategory As Button
 End Class
