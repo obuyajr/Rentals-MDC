@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.ComponentModel
+Imports System.Data.SqlClient
 
 Public Class House_Category
 
@@ -25,9 +26,7 @@ Public Class House_Category
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_addCategory.Click
 
 
-
-
-        ' Check if a room is selected for booking
+        ' Check if field is empty or not
         If Not String.IsNullOrEmpty(txt_category.Text) Then
             Try
                 ' insert room category to the table
@@ -37,16 +36,23 @@ Public Class House_Category
                     insertCmd.ExecuteNonQuery()
                 End Using
 
-                MessageBox.Show("category added successfully!!!")
+                MessageBox.Show("category added successfully!!!", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
                 txt_category.Text = ""
+                Me.Close()
+
             Catch ex As Exception
 
-                MessageBox.Show("Entry already exists!!")
+                MessageBox.Show("Entry already exists!!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+                txt_category.Text = ""
             End Try
 
         End If
 
     End Sub
 
+    Private Sub txt_category_TextChanged(sender As Object, e As EventArgs) Handles txt_category.TextChanged
+        txt_category.CharacterCasing = CharacterCasing.Upper
 
+    End Sub
 End Class

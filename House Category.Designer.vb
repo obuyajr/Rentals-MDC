@@ -24,7 +24,6 @@ Partial Class House_Category
     Private Sub InitializeComponent()
         Panel1 = New Panel()
         txt_category = New TextBox()
-        Label2 = New Label()
         Label1 = New Label()
         btn_addCategory = New Button()
         Panel1.SuspendLayout()
@@ -32,10 +31,9 @@ Partial Class House_Category
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.MistyRose
+        Panel1.BackColor = Color.CadetBlue
         Panel1.BorderStyle = BorderStyle.Fixed3D
         Panel1.Controls.Add(txt_category)
-        Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(btn_addCategory)
         Panel1.Location = New Point(1, 2)
@@ -51,15 +49,6 @@ Partial Class House_Category
         txt_category.Size = New Size(221, 28)
         txt_category.TabIndex = 3
         ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(24, 95)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(41, 15)
-        Label2.TabIndex = 2
-        Label2.Text = "Label2"
-        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -72,13 +61,14 @@ Partial Class House_Category
         ' 
         ' btn_addCategory
         ' 
+        btn_addCategory.BackColor = Color.Yellow
         btn_addCategory.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        btn_addCategory.Location = New Point(384, 50)
+        btn_addCategory.Location = New Point(390, 44)
         btn_addCategory.Name = "btn_addCategory"
-        btn_addCategory.Size = New Size(92, 28)
+        btn_addCategory.Size = New Size(92, 40)
         btn_addCategory.TabIndex = 0
         btn_addCategory.Text = "Add"
-        btn_addCategory.UseVisualStyleBackColor = True
+        btn_addCategory.UseVisualStyleBackColor = False
         ' 
         ' House_Category
         ' 
@@ -87,7 +77,7 @@ Partial Class House_Category
         BackColor = Color.White
         ClientSize = New Size(528, 139)
         Controls.Add(Panel1)
-        FormBorderStyle = FormBorderStyle.SizableToolWindow
+        FormBorderStyle = FormBorderStyle.None
         MaximizeBox = False
         Name = "House_Category"
         StartPosition = FormStartPosition.CenterScreen
@@ -99,7 +89,6 @@ Partial Class House_Category
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents txt_category As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_addCategory As Button
 End Class
