@@ -35,4 +35,16 @@
         Dim newtenant As New newTenant()
         switchPanel(newtenant)
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btn_editTenant.Click
+        Dim editTenant As New editTenant()
+        switchPanel(editTenant)
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
+        Dim assignHouse As New House_Renting()
+        switchPanel(assignHouse)
+    End Sub
 End Class

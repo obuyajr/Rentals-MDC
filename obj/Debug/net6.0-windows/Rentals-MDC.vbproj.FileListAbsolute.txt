@@ -29,3 +29,6 @@ C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\bin\Debug\net6.0-windows\Rent
 C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.editHouse.resources
 C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.newHouse.resources
 C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.newTenant.resources
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.editTenant.resources
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.House_Renting.resources
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.House_Category.resources

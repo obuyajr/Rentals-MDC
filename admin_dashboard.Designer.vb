@@ -23,15 +23,15 @@ Partial Class admin_dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Button8 = New Button()
+        Button7 = New Button()
         Button1 = New Button()
         Button6 = New Button()
-        Button5 = New Button()
+        btn_editTenant = New Button()
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
         Panel2 = New Panel()
-        Button7 = New Button()
-        Button8 = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -42,7 +42,7 @@ Partial Class admin_dashboard
         Panel1.Controls.Add(Button7)
         Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(Button6)
-        Panel1.Controls.Add(Button5)
+        Panel1.Controls.Add(btn_editTenant)
         Panel1.Controls.Add(Button4)
         Panel1.Controls.Add(Button3)
         Panel1.Controls.Add(Button2)
@@ -51,6 +51,39 @@ Partial Class admin_dashboard
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(131, 568)
         Panel1.TabIndex = 0
+        ' 
+        ' Button8
+        ' 
+        Button8.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Button8.FlatAppearance.BorderColor = Color.Indigo
+        Button8.FlatStyle = FlatStyle.Flat
+        Button8.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Button8.ForeColor = Color.White
+        Button8.Image = My.Resources.Resources.report_solid_24__1_
+        Button8.ImageAlign = ContentAlignment.MiddleRight
+        Button8.Location = New Point(3, 459)
+        Button8.Name = "Button8"
+        Button8.Size = New Size(128, 40)
+        Button8.TabIndex = 8
+        Button8.Text = "Reports"
+        Button8.TextAlign = ContentAlignment.MiddleLeft
+        Button8.UseVisualStyleBackColor = True
+        ' 
+        ' Button7
+        ' 
+        Button7.FlatAppearance.BorderColor = Color.Indigo
+        Button7.FlatStyle = FlatStyle.Flat
+        Button7.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Button7.ForeColor = Color.White
+        Button7.Image = My.Resources.Resources.category_alt_solid_24
+        Button7.ImageAlign = ContentAlignment.MiddleRight
+        Button7.Location = New Point(1, 264)
+        Button7.Name = "Button7"
+        Button7.Size = New Size(128, 40)
+        Button7.TabIndex = 7
+        Button7.Text = "House Cat."
+        Button7.TextAlign = ContentAlignment.MiddleLeft
+        Button7.UseVisualStyleBackColor = True
         ' 
         ' Button1
         ' 
@@ -77,29 +110,29 @@ Partial Class admin_dashboard
         Button6.ForeColor = Color.White
         Button6.Image = My.Resources.Resources.category_alt_solid_24
         Button6.ImageAlign = ContentAlignment.MiddleRight
-        Button6.Location = New Point(3, 204)
+        Button6.Location = New Point(3, 214)
         Button6.Name = "Button6"
         Button6.Size = New Size(128, 40)
         Button6.TabIndex = 5
-        Button6.Text = "House Cat."
+        Button6.Text = "Assign Hse."
         Button6.TextAlign = ContentAlignment.MiddleLeft
         Button6.UseVisualStyleBackColor = True
         ' 
-        ' Button5
+        ' btn_editTenant
         ' 
-        Button5.FlatAppearance.BorderColor = Color.Indigo
-        Button5.FlatStyle = FlatStyle.Flat
-        Button5.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Button5.ForeColor = Color.White
-        Button5.Image = My.Resources.Resources.edit_regular_24
-        Button5.ImageAlign = ContentAlignment.MiddleRight
-        Button5.Location = New Point(3, 158)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(128, 40)
-        Button5.TabIndex = 4
-        Button5.Text = "Edit Tenant"
-        Button5.TextAlign = ContentAlignment.MiddleLeft
-        Button5.UseVisualStyleBackColor = True
+        btn_editTenant.FlatAppearance.BorderColor = Color.Indigo
+        btn_editTenant.FlatStyle = FlatStyle.Flat
+        btn_editTenant.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btn_editTenant.ForeColor = Color.White
+        btn_editTenant.Image = My.Resources.Resources.edit_regular_24
+        btn_editTenant.ImageAlign = ContentAlignment.MiddleRight
+        btn_editTenant.Location = New Point(3, 168)
+        btn_editTenant.Name = "btn_editTenant"
+        btn_editTenant.Size = New Size(128, 40)
+        btn_editTenant.TabIndex = 4
+        btn_editTenant.Text = "Edit Tenant"
+        btn_editTenant.TextAlign = ContentAlignment.MiddleLeft
+        btn_editTenant.UseVisualStyleBackColor = True
         ' 
         ' Button4
         ' 
@@ -160,38 +193,6 @@ Partial Class admin_dashboard
         Panel2.Size = New Size(692, 568)
         Panel2.TabIndex = 1
         ' 
-        ' Button7
-        ' 
-        Button7.FlatAppearance.BorderColor = Color.Indigo
-        Button7.FlatStyle = FlatStyle.Flat
-        Button7.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Button7.ForeColor = Color.White
-        Button7.Image = My.Resources.Resources.category_alt_solid_24
-        Button7.ImageAlign = ContentAlignment.MiddleRight
-        Button7.Location = New Point(1, 264)
-        Button7.Name = "Button7"
-        Button7.Size = New Size(128, 40)
-        Button7.TabIndex = 7
-        Button7.Text = "House Cat."
-        Button7.TextAlign = ContentAlignment.MiddleLeft
-        Button7.UseVisualStyleBackColor = True
-        ' 
-        ' Button8
-        ' 
-        Button8.FlatAppearance.BorderColor = Color.Indigo
-        Button8.FlatStyle = FlatStyle.Flat
-        Button8.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Button8.ForeColor = Color.White
-        Button8.Image = My.Resources.Resources.report_solid_24__1_
-        Button8.ImageAlign = ContentAlignment.MiddleRight
-        Button8.Location = New Point(3, 470)
-        Button8.Name = "Button8"
-        Button8.Size = New Size(128, 40)
-        Button8.TabIndex = 8
-        Button8.Text = "Reports"
-        Button8.TextAlign = ContentAlignment.MiddleLeft
-        Button8.UseVisualStyleBackColor = True
-        ' 
         ' admin_dashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -210,7 +211,7 @@ Partial Class admin_dashboard
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents btn_editTenant As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
