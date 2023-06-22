@@ -47,4 +47,6 @@
         Dim assignHouse As New House_Renting()
         switchPanel(assignHouse)
     End Sub
+
+
 End Class

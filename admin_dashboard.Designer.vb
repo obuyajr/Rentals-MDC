@@ -49,7 +49,7 @@ Partial Class admin_dashboard
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(131, 568)
+        Panel1.Size = New Size(136, 568)
         Panel1.TabIndex = 0
         ' 
         ' Button8
@@ -186,11 +186,10 @@ Partial Class admin_dashboard
         ' 
         Panel2.AutoSize = True
         Panel2.BackColor = Color.WhiteSmoke
-        Panel2.BorderStyle = BorderStyle.FixedSingle
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(131, 0)
+        Panel2.Location = New Point(136, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(692, 568)
+        Panel2.Size = New Size(687, 568)
         Panel2.TabIndex = 1
         ' 
         ' admin_dashboard
@@ -202,6 +201,7 @@ Partial Class admin_dashboard
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "admin_dashboard"
+        StartPosition = FormStartPosition.CenterParent
         Text = "admin_dashboard"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)

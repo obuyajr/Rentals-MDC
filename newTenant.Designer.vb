@@ -23,12 +23,12 @@ Partial Class newTenant
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        TextBox6 = New TextBox()
-        TextBox5 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox1 = New TextBox()
+        txt_email = New TextBox()
+        txt_idNo = New TextBox()
+        txt_nationality = New TextBox()
+        txt_phoneNo = New TextBox()
+        txt_telno = New TextBox()
+        txt_name = New TextBox()
         Label7 = New Label()
         Label6 = New Label()
         Label5 = New Label()
@@ -39,11 +39,11 @@ Partial Class newTenant
         Panel2 = New Panel()
         Label10 = New Label()
         Label9 = New Label()
-        TextBox8 = New TextBox()
-        TextBox7 = New TextBox()
+        txt_nok_phone = New TextBox()
+        txt_nok_name = New TextBox()
         Label8 = New Label()
         Panel3 = New Panel()
-        Button1 = New Button()
+        btn_addTenant = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -54,12 +54,12 @@ Partial Class newTenant
         Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Panel1.BackColor = Color.WhiteSmoke
         Panel1.BorderStyle = BorderStyle.Fixed3D
-        Panel1.Controls.Add(TextBox6)
-        Panel1.Controls.Add(TextBox5)
-        Panel1.Controls.Add(TextBox4)
-        Panel1.Controls.Add(TextBox3)
-        Panel1.Controls.Add(TextBox2)
-        Panel1.Controls.Add(TextBox1)
+        Panel1.Controls.Add(txt_email)
+        Panel1.Controls.Add(txt_idNo)
+        Panel1.Controls.Add(txt_nationality)
+        Panel1.Controls.Add(txt_phoneNo)
+        Panel1.Controls.Add(txt_telno)
+        Panel1.Controls.Add(txt_name)
         Panel1.Controls.Add(Label7)
         Panel1.Controls.Add(Label6)
         Panel1.Controls.Add(Label5)
@@ -72,53 +72,53 @@ Partial Class newTenant
         Panel1.Size = New Size(940, 188)
         Panel1.TabIndex = 0
         ' 
-        ' TextBox6
+        ' txt_email
         ' 
-        TextBox6.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox6.Location = New Point(594, 134)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(329, 28)
-        TextBox6.TabIndex = 12
+        txt_email.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_email.Location = New Point(594, 134)
+        txt_email.Name = "txt_email"
+        txt_email.Size = New Size(329, 28)
+        txt_email.TabIndex = 12
         ' 
-        ' TextBox5
+        ' txt_idNo
         ' 
-        TextBox5.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox5.Location = New Point(594, 91)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(194, 28)
-        TextBox5.TabIndex = 11
+        txt_idNo.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_idNo.Location = New Point(594, 91)
+        txt_idNo.Name = "txt_idNo"
+        txt_idNo.Size = New Size(194, 28)
+        txt_idNo.TabIndex = 11
         ' 
-        ' TextBox4
+        ' txt_nationality
         ' 
-        TextBox4.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox4.Location = New Point(594, 37)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(194, 28)
-        TextBox4.TabIndex = 10
+        txt_nationality.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_nationality.Location = New Point(594, 37)
+        txt_nationality.Name = "txt_nationality"
+        txt_nationality.Size = New Size(194, 28)
+        txt_nationality.TabIndex = 10
         ' 
-        ' TextBox3
+        ' txt_phoneNo
         ' 
-        TextBox3.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox3.Location = New Point(131, 134)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(238, 28)
-        TextBox3.TabIndex = 9
+        txt_phoneNo.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_phoneNo.Location = New Point(131, 134)
+        txt_phoneNo.Name = "txt_phoneNo"
+        txt_phoneNo.Size = New Size(238, 28)
+        txt_phoneNo.TabIndex = 9
         ' 
-        ' TextBox2
+        ' txt_telno
         ' 
-        TextBox2.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox2.Location = New Point(131, 91)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(238, 28)
-        TextBox2.TabIndex = 8
+        txt_telno.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_telno.Location = New Point(131, 91)
+        txt_telno.Name = "txt_telno"
+        txt_telno.Size = New Size(238, 28)
+        txt_telno.TabIndex = 8
         ' 
-        ' TextBox1
+        ' txt_name
         ' 
-        TextBox1.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox1.Location = New Point(131, 37)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(329, 28)
-        TextBox1.TabIndex = 7
+        txt_name.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_name.Location = New Point(131, 37)
+        txt_name.Name = "txt_name"
+        txt_name.Size = New Size(329, 28)
+        txt_name.TabIndex = 7
         ' 
         ' Label7
         ' 
@@ -197,8 +197,8 @@ Partial Class newTenant
         Panel2.BorderStyle = BorderStyle.Fixed3D
         Panel2.Controls.Add(Label10)
         Panel2.Controls.Add(Label9)
-        Panel2.Controls.Add(TextBox8)
-        Panel2.Controls.Add(TextBox7)
+        Panel2.Controls.Add(txt_nok_phone)
+        Panel2.Controls.Add(txt_nok_name)
         Panel2.Controls.Add(Label8)
         Panel2.Location = New Point(2, 277)
         Panel2.Name = "Panel2"
@@ -223,21 +223,21 @@ Partial Class newTenant
         Label9.TabIndex = 10
         Label9.Text = "Nxt of Kin"
         ' 
-        ' TextBox8
+        ' txt_nok_phone
         ' 
-        TextBox8.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox8.Location = New Point(131, 69)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(329, 28)
-        TextBox8.TabIndex = 9
+        txt_nok_phone.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_nok_phone.Location = New Point(131, 69)
+        txt_nok_phone.Name = "txt_nok_phone"
+        txt_nok_phone.Size = New Size(329, 28)
+        txt_nok_phone.TabIndex = 9
         ' 
-        ' TextBox7
+        ' txt_nok_name
         ' 
-        TextBox7.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox7.Location = New Point(131, 24)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(329, 28)
-        TextBox7.TabIndex = 8
+        txt_nok_name.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_nok_name.Location = New Point(131, 24)
+        txt_nok_name.Name = "txt_nok_name"
+        txt_nok_name.Size = New Size(329, 28)
+        txt_nok_name.TabIndex = 8
         ' 
         ' Label8
         ' 
@@ -254,22 +254,22 @@ Partial Class newTenant
         Panel3.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Panel3.BackColor = Color.WhiteSmoke
         Panel3.BorderStyle = BorderStyle.FixedSingle
-        Panel3.Controls.Add(Button1)
+        Panel3.Controls.Add(btn_addTenant)
         Panel3.Location = New Point(2, 568)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(940, 72)
         Panel3.TabIndex = 2
         ' 
-        ' Button1
+        ' btn_addTenant
         ' 
-        Button1.BackColor = Color.RosyBrown
-        Button1.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.Location = New Point(133, 20)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(153, 41)
-        Button1.TabIndex = 0
-        Button1.Text = "Add Tenant"
-        Button1.UseVisualStyleBackColor = False
+        btn_addTenant.BackColor = Color.RosyBrown
+        btn_addTenant.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btn_addTenant.Location = New Point(133, 20)
+        btn_addTenant.Name = "btn_addTenant"
+        btn_addTenant.Size = New Size(153, 41)
+        btn_addTenant.TabIndex = 0
+        btn_addTenant.Text = "Add Tenant"
+        btn_addTenant.UseVisualStyleBackColor = False
         ' 
         ' newTenant
         ' 
@@ -302,18 +302,18 @@ Partial Class newTenant
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_email As TextBox
+    Friend WithEvents txt_idNo As TextBox
+    Friend WithEvents txt_nationality As TextBox
+    Friend WithEvents txt_phoneNo As TextBox
+    Friend WithEvents txt_telno As TextBox
+    Friend WithEvents txt_name As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txt_nok_phone As TextBox
+    Friend WithEvents txt_nok_name As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_addTenant As Button
 End Class

@@ -196,7 +196,6 @@ Partial Class editHouse
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(-2, -2)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.ReadOnly = True
         DataGridView1.RowTemplate.Height = 25
         DataGridView1.Size = New Size(503, 400)
         DataGridView1.TabIndex = 0
