@@ -9,9 +9,9 @@
 
     'switch between panels
     Sub switchPanel(panel As Form)
-        Panel2.Controls.Clear()
+        Panel3.Controls.Clear()
         panel.TopLevel = False
-        Panel2.Controls.Add(panel)
+        Panel3.Controls.Add(panel)
         panel.Show()
 
     End Sub
@@ -48,5 +48,7 @@
         switchPanel(assignHouse)
     End Sub
 
+    Private Sub admin_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class
