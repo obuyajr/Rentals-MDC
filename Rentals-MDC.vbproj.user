@@ -28,6 +28,9 @@
     <Compile Update="payment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="resetHouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="user_dashbord.vb">
       <SubType>Form</SubType>
     </Compile>

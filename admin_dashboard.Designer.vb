@@ -33,12 +33,14 @@ Partial Class admin_dashboard
         Button2 = New Button()
         Panel2 = New Panel()
         Panel3 = New Panel()
+        Button5 = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.Indigo
+        Panel1.Controls.Add(Button5)
         Panel1.Controls.Add(Button8)
         Panel1.Controls.Add(Button7)
         Panel1.Controls.Add(Button1)
@@ -200,6 +202,15 @@ Partial Class admin_dashboard
         Panel3.Size = New Size(746, 528)
         Panel3.TabIndex = 2
         ' 
+        ' Button5
+        ' 
+        Button5.Location = New Point(44, 337)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(75, 23)
+        Button5.TabIndex = 9
+        Button5.Text = "Button5"
+        Button5.UseVisualStyleBackColor = True
+        ' 
         ' admin_dashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -229,4 +240,5 @@ Partial Class admin_dashboard
     Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents Button5 As Button
 End Class
