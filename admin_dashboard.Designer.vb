@@ -23,6 +23,7 @@ Partial Class admin_dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Button5 = New Button()
         Button8 = New Button()
         Button7 = New Button()
         Button1 = New Button()
@@ -33,7 +34,6 @@ Partial Class admin_dashboard
         Button2 = New Button()
         Panel2 = New Panel()
         Panel3 = New Panel()
-        Button5 = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -54,6 +54,15 @@ Partial Class admin_dashboard
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(142, 528)
         Panel1.TabIndex = 0
+        ' 
+        ' Button5
+        ' 
+        Button5.Location = New Point(44, 337)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(75, 23)
+        Button5.TabIndex = 9
+        Button5.Text = "Button5"
+        Button5.UseVisualStyleBackColor = True
         ' 
         ' Button8
         ' 
@@ -78,13 +87,13 @@ Partial Class admin_dashboard
         Button7.FlatStyle = FlatStyle.Flat
         Button7.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Button7.ForeColor = Color.White
-        Button7.Image = My.Resources.Resources.category_alt_solid_24
+        Button7.Image = My.Resources.Resources.reset_regular_24
         Button7.ImageAlign = ContentAlignment.MiddleRight
         Button7.Location = New Point(1, 264)
         Button7.Name = "Button7"
         Button7.Size = New Size(128, 40)
         Button7.TabIndex = 7
-        Button7.Text = "House Cat."
+        Button7.Text = "Reset House"
         Button7.TextAlign = ContentAlignment.MiddleLeft
         Button7.UseVisualStyleBackColor = True
         ' 
@@ -201,15 +210,6 @@ Partial Class admin_dashboard
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(746, 528)
         Panel3.TabIndex = 2
-        ' 
-        ' Button5
-        ' 
-        Button5.Location = New Point(44, 337)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(75, 23)
-        Button5.TabIndex = 9
-        Button5.Text = "Button5"
-        Button5.UseVisualStyleBackColor = True
         ' 
         ' admin_dashboard
         ' 

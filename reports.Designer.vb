@@ -46,11 +46,15 @@ Partial Class reports
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.WhiteSmoke
         ClientSize = New Size(800, 450)
         Controls.Add(MenuStrip1)
+        FormBorderStyle = FormBorderStyle.None
         MainMenuStrip = MenuStrip1
         Name = "reports"
+        StartPosition = FormStartPosition.Manual
         Text = "reports"
+        WindowState = FormWindowState.Maximized
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
         ResumeLayout(False)
