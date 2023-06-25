@@ -43,11 +43,11 @@ Partial Class resetHouse
         DataGridView1.AllowUserToAddRows = False
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(82, 44)
+        DataGridView1.Location = New Point(12, 44)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(240, 150)
+        DataGridView1.Size = New Size(478, 380)
         DataGridView1.TabIndex = 1
         ' 
         ' Label1
