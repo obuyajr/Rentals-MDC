@@ -205,6 +205,8 @@ Partial Class admin_dashboard
         ' 
         ' Panel3
         ' 
+        Panel3.BackgroundImage = My.Resources.Resources.building_house_solid_240
+        Panel3.BackgroundImageLayout = ImageLayout.Center
         Panel3.Dock = DockStyle.Fill
         Panel3.Location = New Point(142, 0)
         Panel3.Name = "Panel3"
