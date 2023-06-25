@@ -33,18 +33,20 @@ Partial Class resetHouse
         ' 
         ' Button1
         ' 
+        Button1.BackColor = Color.DodgerBlue
         Button1.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         Button1.Location = New Point(637, 137)
         Button1.Name = "Button1"
         Button1.Size = New Size(94, 28)
         Button1.TabIndex = 0
         Button1.Text = "Reset"
-        Button1.UseVisualStyleBackColor = True
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' DataGridView1
         ' 
         DataGridView1.AllowUserToAddRows = False
         DataGridView1.AllowUserToDeleteRows = False
+        DataGridView1.BackgroundColor = SystemColors.ButtonHighlight
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(12, 32)
         DataGridView1.Name = "DataGridView1"
@@ -73,6 +75,7 @@ Partial Class resetHouse
         ' 
         ' Panel1
         ' 
+        Panel1.BackColor = Color.RosyBrown
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(TextBox1)
         Panel1.Location = New Point(558, 32)
@@ -85,7 +88,7 @@ Partial Class resetHouse
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(800, 436)
         Controls.Add(DataGridView1)
         Controls.Add(Button1)
         Controls.Add(Panel1)
