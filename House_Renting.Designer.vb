@@ -34,6 +34,9 @@ Partial Class House_Renting
         Panel2 = New Panel()
         DataGridView1 = New DataGridView()
         Panel3 = New Panel()
+        Panel6 = New Panel()
+        Button2 = New Button()
+        Button1 = New Button()
         Panel4 = New Panel()
         txt_status = New TextBox()
         txt_rent = New TextBox()
@@ -64,16 +67,14 @@ Partial Class House_Renting
         Label15 = New Label()
         Label16 = New Label()
         txt_idno = New TextBox()
-        Panel6 = New Panel()
-        Button1 = New Button()
-        Button2 = New Button()
+        RadioButton1 = New RadioButton()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
+        Panel6.SuspendLayout()
         Panel4.SuspendLayout()
         Panel5.SuspendLayout()
-        Panel6.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -207,6 +208,36 @@ Partial Class House_Renting
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(487, 644)
         Panel3.TabIndex = 2
+        ' 
+        ' Panel6
+        ' 
+        Panel6.BorderStyle = BorderStyle.FixedSingle
+        Panel6.Controls.Add(Button2)
+        Panel6.Controls.Add(Button1)
+        Panel6.Location = New Point(9, 544)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(464, 60)
+        Panel6.TabIndex = 3
+        ' 
+        ' Button2
+        ' 
+        Button2.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Button2.Location = New Point(323, 12)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(122, 35)
+        Button2.TabIndex = 1
+        Button2.Text = "Clear"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.Location = New Point(106, 12)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(127, 35)
+        Button1.TabIndex = 0
+        Button1.Text = "Rent House"
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' Panel4
         ' 
@@ -342,6 +373,7 @@ Partial Class House_Renting
         ' 
         Panel5.BackColor = Color.PeachPuff
         Panel5.BorderStyle = BorderStyle.Fixed3D
+        Panel5.Controls.Add(RadioButton1)
         Panel5.Controls.Add(txt_nok_phone)
         Panel5.Controls.Add(Label17)
         Panel5.Controls.Add(combo_tenant_name)
@@ -360,7 +392,7 @@ Partial Class House_Renting
         Panel5.Controls.Add(txt_idno)
         Panel5.Location = New Point(3, 145)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(476, 334)
+        Panel5.Size = New Size(476, 359)
         Panel5.TabIndex = 2
         ' 
         ' txt_nok_phone
@@ -508,35 +540,16 @@ Partial Class House_Renting
         txt_idno.Size = New Size(163, 25)
         txt_idno.TabIndex = 10
         ' 
-        ' Panel6
+        ' RadioButton1
         ' 
-        Panel6.BorderStyle = BorderStyle.FixedSingle
-        Panel6.Controls.Add(Button2)
-        Panel6.Controls.Add(Button1)
-        Panel6.Location = New Point(9, 544)
-        Panel6.Name = "Panel6"
-        Panel6.Size = New Size(464, 60)
-        Panel6.TabIndex = 3
-        ' 
-        ' Button1
-        ' 
-        Button1.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.Location = New Point(106, 12)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(127, 35)
-        Button1.TabIndex = 0
-        Button1.Text = "Rent House"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Button2
-        ' 
-        Button2.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Button2.Location = New Point(323, 12)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(122, 35)
-        Button2.TabIndex = 1
-        Button2.Text = "Clear"
-        Button2.UseVisualStyleBackColor = True
+        RadioButton1.AutoSize = True
+        RadioButton1.Location = New Point(116, 329)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(97, 19)
+        RadioButton1.TabIndex = 19
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "RadioButton1"
+        RadioButton1.UseVisualStyleBackColor = True
         ' 
         ' House_Renting
         ' 
@@ -556,11 +569,11 @@ Partial Class House_Renting
         Panel2.ResumeLayout(False)
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
+        Panel6.ResumeLayout(False)
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
-        Panel6.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -609,4 +622,5 @@ Partial Class House_Renting
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents RadioButton1 As RadioButton
 End Class
