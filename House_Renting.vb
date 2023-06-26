@@ -335,8 +335,31 @@ Public Class House_Renting
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim payment As New Payment()
+        Dim payment As New payment()
+
+        ' Check if the radio button is checked
+        If rd_btn1.Checked Then
+            ' Calculate the total payment by adding the deposit to the rent
+            Dim deposit As Decimal = Decimal.Parse(txt_deposit.Text)
+            Dim rent As Decimal = Decimal.Parse(txt_rent.Text)
+            Dim totalPayment As Decimal = deposit + rent
+
+            ' Pass the total payment to the Payment form
+            payment.SetPayment(totalPayment)
+
+        Else
+            MessageBox.Show(" Please Check the Box!! ")
+
+
+        End If
+
+        payment.Show()
+
         payment.show
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rd_btn1.CheckedChanged
 
     End Sub
 End Class
