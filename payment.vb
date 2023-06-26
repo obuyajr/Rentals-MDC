@@ -24,4 +24,8 @@ Public Class payment
         End If
 
     End Sub
+
+    Private Sub payment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txt_balance.ReadOnly = True
+    End Sub
 End Class

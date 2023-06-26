@@ -38,7 +38,6 @@ Partial Class payment
         ' Panel1
         ' 
         Panel1.BackColor = Color.DarkSalmon
-        Panel1.BorderStyle = BorderStyle.FixedSingle
         Panel1.Controls.Add(txt_balance)
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Button1)
@@ -56,6 +55,7 @@ Partial Class payment
         ' txt_balance
         ' 
         txt_balance.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_balance.ForeColor = Color.Lime
         txt_balance.Location = New Point(174, 245)
         txt_balance.Name = "txt_balance"
         txt_balance.Size = New Size(135, 33)
