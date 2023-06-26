@@ -23,12 +23,15 @@ Partial Class payment
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        lbl_amount = New Label()
-        Label1 = New Label()
-        Label2 = New Label()
-        TextBox1 = New TextBox()
+        Label4 = New Label()
+        btn_print = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
+        txt_cash = New TextBox()
+        Label2 = New Label()
+        lbl_amount = New Label()
+        Label1 = New Label()
+        Label5 = New Label()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -36,9 +39,12 @@ Partial Class payment
         ' 
         Panel1.BackColor = Color.DarkSalmon
         Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(Label5)
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(btn_print)
         Panel1.Controls.Add(TextBox2)
         Panel1.Controls.Add(Label3)
-        Panel1.Controls.Add(TextBox1)
+        Panel1.Controls.Add(txt_cash)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(lbl_amount)
         Panel1.Controls.Add(Label1)
@@ -47,10 +53,72 @@ Partial Class payment
         Panel1.Size = New Size(392, 449)
         Panel1.TabIndex = 0
         ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.ForeColor = Color.Red
+        Label4.Location = New Point(309, 330)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(0, 21)
+        Label4.TabIndex = 7
+        ' 
+        ' btn_print
+        ' 
+        btn_print.BackColor = Color.PaleTurquoise
+        btn_print.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btn_print.ForeColor = Color.Black
+        btn_print.Image = My.Resources.Resources.printer_solid_24
+        btn_print.ImageAlign = ContentAlignment.MiddleRight
+        btn_print.Location = New Point(155, 388)
+        btn_print.Name = "btn_print"
+        btn_print.Size = New Size(167, 41)
+        btn_print.TabIndex = 6
+        btn_print.Text = "Print Receipt"
+        btn_print.TextAlign = ContentAlignment.MiddleLeft
+        btn_print.UseVisualStyleBackColor = False
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox2.Location = New Point(155, 140)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(135, 33)
+        TextBox2.TabIndex = 5
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(3, 152)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(133, 21)
+        Label3.TabIndex = 4
+        Label3.Text = "M/Money ( F2 )"
+        ' 
+        ' txt_cash
+        ' 
+        txt_cash.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_cash.Location = New Point(155, 83)
+        txt_cash.Name = "txt_cash"
+        txt_cash.Size = New Size(135, 33)
+        txt_cash.TabIndex = 3
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.Location = New Point(92, 89)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(44, 21)
+        Label2.TabIndex = 2
+        Label2.Text = "Ksh."
+        ' 
         ' lbl_amount
         ' 
         lbl_amount.AutoSize = True
         lbl_amount.Font = New Font("Segoe UI Black", 21.75F, FontStyle.Bold, GraphicsUnit.Point)
+        lbl_amount.ForeColor = Color.Yellow
         lbl_amount.Location = New Point(234, 13)
         lbl_amount.Name = "lbl_amount"
         lbl_amount.Size = New Size(113, 40)
@@ -67,41 +135,15 @@ Partial Class payment
         Label1.TabIndex = 0
         Label1.Text = "Amount Due."
         ' 
-        ' Label2
+        ' Label5
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(29, 89)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(44, 21)
-        Label2.TabIndex = 2
-        Label2.Text = "Ksh."
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox1.Location = New Point(174, 83)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(135, 33)
-        TextBox1.TabIndex = 3
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox2.Location = New Point(174, 140)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(135, 33)
-        TextBox2.TabIndex = 5
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(3, 152)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(88, 21)
-        Label3.TabIndex = 4
-        Label3.Text = "M/Money"
+        Label5.AutoSize = True
+        Label5.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.Location = New Point(155, 344)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(114, 20)
+        Label5.TabIndex = 8
+        Label5.Text = "Loose Change:"
         ' 
         ' payment
         ' 
@@ -119,8 +161,11 @@ Partial Class payment
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents lbl_amount As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_cash As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents btn_print As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class
