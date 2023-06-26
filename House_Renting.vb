@@ -355,7 +355,7 @@ Public Class House_Renting
 
         payment.Show()
 
-        payment.show
+        payment.Show()
 
     End Sub
 

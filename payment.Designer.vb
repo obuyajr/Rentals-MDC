@@ -23,12 +23,15 @@ Partial Class payment
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        lbl_amount = New Label()
-        Label1 = New Label()
-        Label2 = New Label()
-        TextBox1 = New TextBox()
+        txt_balance = New TextBox()
+        Label4 = New Label()
+        Button1 = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
+        txt_cash = New TextBox()
+        Label2 = New Label()
+        lbl_amount = New Label()
+        Label1 = New Label()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -36,9 +39,12 @@ Partial Class payment
         ' 
         Panel1.BackColor = Color.DarkSalmon
         Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(txt_balance)
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(TextBox2)
         Panel1.Controls.Add(Label3)
-        Panel1.Controls.Add(TextBox1)
+        Panel1.Controls.Add(txt_cash)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(lbl_amount)
         Panel1.Controls.Add(Label1)
@@ -47,10 +53,78 @@ Partial Class payment
         Panel1.Size = New Size(392, 449)
         Panel1.TabIndex = 0
         ' 
+        ' txt_balance
+        ' 
+        txt_balance.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_balance.Location = New Point(174, 245)
+        txt_balance.Name = "txt_balance"
+        txt_balance.Size = New Size(135, 33)
+        txt_balance.TabIndex = 8
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Location = New Point(69, 251)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(71, 21)
+        Label4.TabIndex = 7
+        Label4.Text = "Balance"
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.Image = My.Resources.Resources.printer_solid_24
+        Button1.ImageAlign = ContentAlignment.MiddleRight
+        Button1.Location = New Point(121, 401)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(150, 43)
+        Button1.TabIndex = 6
+        Button1.Text = "Print Receipt"
+        Button1.TextAlign = ContentAlignment.MiddleLeft
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        TextBox2.Location = New Point(174, 140)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(135, 33)
+        TextBox2.TabIndex = 5
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(52, 146)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(88, 21)
+        Label3.TabIndex = 4
+        Label3.Text = "M/Money"
+        ' 
+        ' txt_cash
+        ' 
+        txt_cash.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_cash.Location = New Point(174, 83)
+        txt_cash.Name = "txt_cash"
+        txt_cash.Size = New Size(135, 33)
+        txt_cash.TabIndex = 3
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.Location = New Point(96, 89)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(44, 21)
+        Label2.TabIndex = 2
+        Label2.Text = "Ksh."
+        ' 
         ' lbl_amount
         ' 
         lbl_amount.AutoSize = True
         lbl_amount.Font = New Font("Segoe UI Black", 21.75F, FontStyle.Bold, GraphicsUnit.Point)
+        lbl_amount.ForeColor = Color.Yellow
         lbl_amount.Location = New Point(234, 13)
         lbl_amount.Name = "lbl_amount"
         lbl_amount.Size = New Size(113, 40)
@@ -66,42 +140,6 @@ Partial Class payment
         Label1.Size = New Size(194, 37)
         Label1.TabIndex = 0
         Label1.Text = "Amount Due."
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(29, 89)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(44, 21)
-        Label2.TabIndex = 2
-        Label2.Text = "Ksh."
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox1.Location = New Point(174, 83)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(135, 33)
-        TextBox1.TabIndex = 3
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Font = New Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox2.Location = New Point(174, 140)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(135, 33)
-        TextBox2.TabIndex = 5
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(3, 152)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(88, 21)
-        Label3.TabIndex = 4
-        Label3.Text = "M/Money"
         ' 
         ' payment
         ' 
@@ -119,8 +157,11 @@ Partial Class payment
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents lbl_amount As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_cash As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents txt_balance As TextBox
+    Friend WithEvents Label4 As Label
 End Class
