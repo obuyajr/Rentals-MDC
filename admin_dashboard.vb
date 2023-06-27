@@ -1,4 +1,7 @@
 ﻿Public Class admin_dashboard
+
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Dispose()
         Dim f1 As New Form1
@@ -57,14 +60,12 @@
     End Sub
 
     Private Sub admin_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim intX As Integer = Screen.PrimaryScreen.Bounds.Width
-        Dim intY As Integer = Screen.PrimaryScreen.Bounds.Height
 
-        Me.Width = intX
-        Me.Height = intY - 40
-        Me.Left = 0
-        Me.Top = 0
-
-
+        Me.Width = Screen.PrimaryScreen.WorkingArea.Width
+        Me.Height = Screen.PrimaryScreen.WorkingArea.Height
     End Sub
+
+
+
+
 End Class

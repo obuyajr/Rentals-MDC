@@ -52,7 +52,7 @@ Partial Class admin_dashboard
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(142, 528)
+        Panel1.Size = New Size(142, 616)
         Panel1.TabIndex = 0
         ' 
         ' Button5
@@ -73,7 +73,7 @@ Partial Class admin_dashboard
         Button8.ForeColor = Color.White
         Button8.Image = My.Resources.Resources.report_solid_24__1_
         Button8.ImageAlign = ContentAlignment.MiddleRight
-        Button8.Location = New Point(3, 419)
+        Button8.Location = New Point(3, 507)
         Button8.Name = "Button8"
         Button8.Size = New Size(128, 40)
         Button8.TabIndex = 8
@@ -106,7 +106,7 @@ Partial Class admin_dashboard
         Button1.ForeColor = Color.White
         Button1.Image = My.Resources.Resources.close
         Button1.ImageAlign = ContentAlignment.MiddleRight
-        Button1.Location = New Point(0, 476)
+        Button1.Location = New Point(0, 564)
         Button1.Name = "Button1"
         Button1.Size = New Size(142, 40)
         Button1.TabIndex = 6
@@ -200,7 +200,7 @@ Partial Class admin_dashboard
         Panel2.Dock = DockStyle.Right
         Panel2.Location = New Point(888, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(0, 528)
+        Panel2.Size = New Size(0, 616)
         Panel2.TabIndex = 1
         ' 
         ' Panel3
@@ -210,22 +210,21 @@ Partial Class admin_dashboard
         Panel3.Dock = DockStyle.Fill
         Panel3.Location = New Point(142, 0)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(746, 528)
+        Panel3.Size = New Size(746, 616)
         Panel3.TabIndex = 2
         ' 
         ' admin_dashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(888, 528)
+        ClientSize = New Size(888, 616)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "admin_dashboard"
-        StartPosition = FormStartPosition.WindowsDefaultBounds
+        StartPosition = FormStartPosition.Manual
         Text = "admin_dashboard"
-        WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
