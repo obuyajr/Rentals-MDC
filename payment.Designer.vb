@@ -25,7 +25,7 @@ Partial Class payment
         Panel1 = New Panel()
         txt_balance = New TextBox()
         Label4 = New Label()
-        Button1 = New Button()
+        btn_print = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
         txt_cash = New TextBox()
@@ -40,7 +40,7 @@ Partial Class payment
         Panel1.BackColor = Color.DarkSalmon
         Panel1.Controls.Add(txt_balance)
         Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(btn_print)
         Panel1.Controls.Add(TextBox2)
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(txt_cash)
@@ -71,18 +71,18 @@ Partial Class payment
         Label4.TabIndex = 7
         Label4.Text = "Balance"
         ' 
-        ' Button1
+        ' btn_print
         ' 
-        Button1.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.Image = My.Resources.Resources.printer_solid_24
-        Button1.ImageAlign = ContentAlignment.MiddleRight
-        Button1.Location = New Point(121, 401)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(150, 43)
-        Button1.TabIndex = 6
-        Button1.Text = "Print Receipt"
-        Button1.TextAlign = ContentAlignment.MiddleLeft
-        Button1.UseVisualStyleBackColor = True
+        btn_print.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        btn_print.Image = My.Resources.Resources.printer_solid_24
+        btn_print.ImageAlign = ContentAlignment.MiddleRight
+        btn_print.Location = New Point(121, 401)
+        btn_print.Name = "btn_print"
+        btn_print.Size = New Size(150, 43)
+        btn_print.TabIndex = 6
+        btn_print.Text = "Print Receipt"
+        btn_print.TextAlign = ContentAlignment.MiddleLeft
+        btn_print.UseVisualStyleBackColor = True
         ' 
         ' TextBox2
         ' 
@@ -161,7 +161,7 @@ Partial Class payment
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_print As Button
     Friend WithEvents txt_balance As TextBox
     Friend WithEvents Label4 As Label
 End Class

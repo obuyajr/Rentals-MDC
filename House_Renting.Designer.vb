@@ -90,9 +90,9 @@ Partial Class House_Renting
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Label1)
-        Panel1.Location = New Point(1, 35)
+        Panel1.Location = New Point(12, 35)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(678, 139)
+        Panel1.Size = New Size(808, 139)
         Panel1.TabIndex = 0
         ' 
         ' combo_status
@@ -178,9 +178,9 @@ Partial Class House_Renting
         Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Panel2.BorderStyle = BorderStyle.FixedSingle
         Panel2.Controls.Add(DataGridView1)
-        Panel2.Location = New Point(1, 180)
+        Panel2.Location = New Point(12, 180)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(819, 460)
+        Panel2.Size = New Size(808, 460)
         Panel2.TabIndex = 1
         ' 
         ' DataGridView1
