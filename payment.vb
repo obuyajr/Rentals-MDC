@@ -7,6 +7,8 @@ Public Class payment
     Dim con As SqlConnection
     Dim cmd As SqlCommand
 
+
+
     Public Sub SetPayment(paymentAmount As Decimal)
 
         ' For example, display the payment amount in a label
@@ -31,13 +33,11 @@ Public Class payment
     End Sub
 
     Private Sub payment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
         txt_balance.ReadOnly = True
     End Sub
 
-    Private Sub InserToDb(houseNo As String, location As String, category As String,
-                          deposit As String, rent As String, status As String)
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_print.Click
 
@@ -46,8 +46,6 @@ Public Class payment
 
 
 
-
-
-
     End Sub
+
 End Class

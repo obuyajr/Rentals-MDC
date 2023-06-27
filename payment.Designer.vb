@@ -60,6 +60,7 @@ Partial Class payment
         txt_balance.Name = "txt_balance"
         txt_balance.Size = New Size(135, 33)
         txt_balance.TabIndex = 8
+        txt_balance.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label4
         ' 
@@ -91,6 +92,7 @@ Partial Class payment
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(135, 33)
         TextBox2.TabIndex = 5
+        TextBox2.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label3
         ' 
@@ -109,6 +111,7 @@ Partial Class payment
         txt_cash.Name = "txt_cash"
         txt_cash.Size = New Size(135, 33)
         txt_cash.TabIndex = 3
+        txt_cash.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label2
         ' 
