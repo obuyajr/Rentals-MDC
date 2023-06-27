@@ -1,6 +1,11 @@
-﻿Imports System.Threading
+﻿Imports System.Data.SqlClient
+Imports System.Threading
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class payment
+
+    Dim con As SqlConnection
+    Dim cmd As SqlCommand
 
     Public Sub SetPayment(paymentAmount As Decimal)
 
@@ -29,7 +34,20 @@ Public Class payment
         txt_balance.ReadOnly = True
     End Sub
 
+    Private Sub InserToDb(houseNo As String, location As String, category As String,
+                          deposit As String, rent As String, status As String)
+
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_print.Click
+
+
+
+
+
+
+
+
 
     End Sub
 End Class

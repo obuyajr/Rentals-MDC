@@ -337,6 +337,7 @@ Public Class House_Renting
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim payment As New payment()
 
+
         ' Check if the radio button is checked
         If rd_btn1.Checked Then
             ' Calculate the total payment by adding the deposit to the rent
@@ -355,11 +356,17 @@ Public Class House_Renting
 
         payment.Show()
 
-        payment.Show()
+
+
+
+
 
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rd_btn1.CheckedChanged
 
     End Sub
+
+
+
 End Class

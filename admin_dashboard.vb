@@ -9,6 +9,14 @@
 
     'switch between panels
     Sub switchPanel(panel As Form)
+        Dim intX As Integer = Screen.PrimaryScreen.Bounds.Width
+        Dim intY As Integer = Screen.PrimaryScreen.Bounds.Height
+
+        Me.Width = intX
+        Me.Height = intY - 40
+        Me.Left = 0
+        Me.Top = 0
+
         Panel3.Controls.Clear()
         panel.TopLevel = False
         Panel3.Controls.Add(panel)
@@ -49,6 +57,14 @@
     End Sub
 
     Private Sub admin_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim intX As Integer = Screen.PrimaryScreen.Bounds.Width
+        Dim intY As Integer = Screen.PrimaryScreen.Bounds.Height
+
+        Me.Width = intX
+        Me.Height = intY - 40
+        Me.Left = 0
+        Me.Top = 0
+
 
     End Sub
 End Class

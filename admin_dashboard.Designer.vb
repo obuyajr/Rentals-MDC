@@ -223,7 +223,7 @@ Partial Class admin_dashboard
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "admin_dashboard"
-        StartPosition = FormStartPosition.Manual
+        StartPosition = FormStartPosition.WindowsDefaultBounds
         Text = "admin_dashboard"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
