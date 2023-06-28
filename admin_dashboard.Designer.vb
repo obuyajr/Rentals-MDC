@@ -99,9 +99,9 @@ Partial Class admin_dashboard
         Button8.ForeColor = Color.White
         Button8.Image = My.Resources.Resources.report_solid_24__1_
         Button8.ImageAlign = ContentAlignment.MiddleRight
-        Button8.Location = New Point(3, 507)
+        Button8.Location = New Point(5, 507)
         Button8.Name = "Button8"
-        Button8.Size = New Size(133, 40)
+        Button8.Size = New Size(131, 40)
         Button8.TabIndex = 8
         Button8.Text = "Reports"
         Button8.TextAlign = ContentAlignment.MiddleLeft
@@ -132,9 +132,9 @@ Partial Class admin_dashboard
         Button1.ForeColor = Color.White
         Button1.Image = My.Resources.Resources.close
         Button1.ImageAlign = ContentAlignment.MiddleRight
-        Button1.Location = New Point(0, 564)
+        Button1.Location = New Point(5, 564)
         Button1.Name = "Button1"
-        Button1.Size = New Size(139, 40)
+        Button1.Size = New Size(131, 40)
         Button1.TabIndex = 6
         Button1.Text = "EXIT"
         Button1.UseVisualStyleBackColor = True

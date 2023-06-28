@@ -72,6 +72,9 @@
         Me.Width = Screen.PrimaryScreen.WorkingArea.Width
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height
 
+        'display username from login form
+        lbl_uname.Text = Form1.txt_uname.Text
+
     End Sub
 
 
