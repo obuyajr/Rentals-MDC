@@ -50,7 +50,7 @@ Partial Class editTenant
         ' 
         ' Panel1
         ' 
-        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Panel1.BorderStyle = BorderStyle.FixedSingle
         Panel1.Controls.Add(DataGridView1)
         Panel1.Location = New Point(2, 83)
@@ -62,7 +62,7 @@ Partial Class editTenant
         ' 
         DataGridView1.AllowUserToAddRows = False
         DataGridView1.AllowUserToDeleteRows = False
-        DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
+        DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(0, 3)
         DataGridView1.Name = "DataGridView1"

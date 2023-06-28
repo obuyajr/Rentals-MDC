@@ -1,8 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class editTenant
-    Dim con As SqlConnection
-    Dim cmd As SqlCommand
+    Dim con As New SqlConnection
+    Dim cmd As New SqlCommand
 
     Private Sub editTenant_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         con.ConnectionString = "Data Source=DESKTOP-KCVKSCU;Initial Catalog=rentals;Integrated Security=True;Pooling=False"
