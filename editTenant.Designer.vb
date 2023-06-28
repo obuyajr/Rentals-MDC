@@ -28,7 +28,7 @@ Partial Class editTenant
         TextBox7 = New TextBox()
         TextBox8 = New TextBox()
         TextBox5 = New TextBox()
-        TextBox6 = New TextBox()
+        txt_idNo = New TextBox()
         TextBox3 = New TextBox()
         TextBox4 = New TextBox()
         TextBox2 = New TextBox()
@@ -68,7 +68,7 @@ Partial Class editTenant
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(591, 597)
+        DataGridView1.Size = New Size(580, 597)
         DataGridView1.TabIndex = 0
         ' 
         ' Panel2
@@ -79,7 +79,7 @@ Partial Class editTenant
         Panel2.Controls.Add(TextBox7)
         Panel2.Controls.Add(TextBox8)
         Panel2.Controls.Add(TextBox5)
-        Panel2.Controls.Add(TextBox6)
+        Panel2.Controls.Add(txt_idNo)
         Panel2.Controls.Add(TextBox3)
         Panel2.Controls.Add(TextBox4)
         Panel2.Controls.Add(TextBox2)
@@ -126,14 +126,14 @@ Partial Class editTenant
         TextBox5.Size = New Size(229, 28)
         TextBox5.TabIndex = 15
         ' 
-        ' TextBox6
+        ' txt_idNo
         ' 
-        TextBox6.BackColor = Color.White
-        TextBox6.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        TextBox6.Location = New Point(129, 273)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(229, 28)
-        TextBox6.TabIndex = 14
+        txt_idNo.BackColor = Color.White
+        txt_idNo.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_idNo.Location = New Point(129, 273)
+        txt_idNo.Name = "txt_idNo"
+        txt_idNo.Size = New Size(229, 28)
+        txt_idNo.TabIndex = 14
         ' 
         ' TextBox3
         ' 
@@ -311,7 +311,7 @@ Partial Class editTenant
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txt_idNo As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox2 As TextBox
