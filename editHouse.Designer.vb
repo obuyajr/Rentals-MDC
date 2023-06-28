@@ -37,6 +37,8 @@ Partial Class editHouse
         Label2 = New Label()
         Label1 = New Label()
         DataGridView1 = New DataGridView()
+        txtStatus = New TextBox()
+        Label3 = New Label()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +71,8 @@ Partial Class editHouse
         ' 
         Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Panel2.BorderStyle = BorderStyle.FixedSingle
+        Panel2.Controls.Add(txtStatus)
+        Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(combo_category)
         Panel2.Controls.Add(btn_edit)
@@ -200,6 +204,24 @@ Partial Class editHouse
         DataGridView1.Size = New Size(503, 400)
         DataGridView1.TabIndex = 0
         ' 
+        ' txtStatus
+        ' 
+        txtStatus.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txtStatus.Location = New Point(144, 280)
+        txtStatus.Name = "txtStatus"
+        txtStatus.Size = New Size(133, 28)
+        txtStatus.TabIndex = 25
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(71, 291)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(46, 17)
+        Label3.TabIndex = 24
+        Label3.Text = "Status"
+        ' 
         ' editHouse
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -234,4 +256,6 @@ Partial Class editHouse
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents txtStatus As TextBox
+    Friend WithEvents Label3 As Label
 End Class

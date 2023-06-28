@@ -23,6 +23,22 @@ Public Class editHouse
         'open dB con
         con.Open()
 
+        ' SQL query to fetch data from the table
+        Dim query As String = "SELECT DISTINCT house_type FROM category"
+
+        ' Create a command to execute the query
+        Using cmd As New SqlCommand(query, con)
+            ' Execute the query and obtain a data reader
+            Using reader As SqlDataReader = cmd.ExecuteReader()
+                ' Clear the existing items in the ComboBox
+                combo_category.Items.Clear()
+
+                ' Iterate through the data reader and add items to the ComboBox
+                While reader.Read()
+                    combo_category.Items.Add(reader("house_type").ToString())
+                End While
+            End Using
+        End Using
 
 
     End Sub
@@ -108,6 +124,7 @@ Public Class editHouse
 
                 txt_deposit.Text = selectedRow.Cells("deposit").Value.ToString()
                 txt_rent.Text = selectedRow.Cells("rent").Value.ToString()
+                txtStatus.Text = selectedRow.Cells("status").Value.ToString()
 
 
             Else
@@ -126,6 +143,59 @@ Public Class editHouse
     End Sub
 
     Private Sub btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
+
+        ' Retrieve the selected row
+        Dim selectedRow As DataGridViewRow = Nothing
+
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            If Convert.ToBoolean(row.Cells("Select").Value) Then
+                selectedRow = row
+                Exit For
+            End If
+        Next
+
+        ' Update the corresponding record in the database
+        If selectedRow IsNot Nothing Then
+            Dim houseNo As String = Convert.ToString(selectedRow.Cells("house_number").Value)
+
+            ' Open the database connection
+            'con.Open()
+
+            ' Update the record using a parameterized query
+            Dim query As String = "UPDATE houses SET location = @location, category = @category, deposit = @deposit, rent = @rent, status = @status WHERE house_number = @house_number"
+            cmd = New SqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@location", txt_location.Text)
+            cmd.Parameters.AddWithValue("@category", combo_category.SelectedItem.ToString())
+            cmd.Parameters.AddWithValue("@deposit", txt_deposit.Text)
+            cmd.Parameters.AddWithValue("@rent", txt_rent.Text)
+            cmd.Parameters.AddWithValue("@status", txtStatus.Text)
+            cmd.Parameters.AddWithValue("@house_number", houseNo)
+
+            Try
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("HOUSE DETAILS EDITED SUCCESSFULLY")
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                con.Close()
+            End Try
+
+            cmd.Dispose()
+
+            ' Clear the textboxes and selection
+            txt_houseNo.Text = ""
+            txt_location.Text = ""
+            combo_category.SelectedItem = Nothing
+            txt_deposit.Text = ""
+            txt_rent.Text = ""
+            txtStatus.Text = ""
+
+            ' Refresh the grid
+            UpdateGrid()
+        Else
+            MessageBox.Show("No house selected.")
+        End If
+
 
 
 
