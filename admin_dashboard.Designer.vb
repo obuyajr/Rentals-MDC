@@ -101,7 +101,7 @@ Partial Class admin_dashboard
         Button8.ImageAlign = ContentAlignment.MiddleRight
         Button8.Location = New Point(3, 507)
         Button8.Name = "Button8"
-        Button8.Size = New Size(136, 40)
+        Button8.Size = New Size(133, 40)
         Button8.TabIndex = 8
         Button8.Text = "Reports"
         Button8.TextAlign = ContentAlignment.MiddleLeft

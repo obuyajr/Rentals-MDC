@@ -41,7 +41,7 @@ Partial Class Form1
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.Peru
+        Panel1.BackColor = Color.Indigo
         Panel1.BorderStyle = BorderStyle.FixedSingle
         Panel1.Controls.Add(Button2)
         Panel1.Controls.Add(Label4)
@@ -73,7 +73,7 @@ Partial Class Form1
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.Linen
+        Panel2.BackColor = Color.White
         Panel2.BorderStyle = BorderStyle.FixedSingle
         Panel2.Controls.Add(combo_utype)
         Panel2.Controls.Add(txt_pwd)
@@ -144,12 +144,12 @@ Partial Class Form1
         ' 
         ' Panel3
         ' 
-        Panel3.BackColor = Color.Peru
+        Panel3.BackColor = Color.DarkSlateBlue
         Panel3.BorderStyle = BorderStyle.FixedSingle
         Panel3.Controls.Add(Button1)
         Panel3.Location = New Point(-18, 295)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(455, 109)
+        Panel3.Size = New Size(422, 98)
         Panel3.TabIndex = 2
         ' 
         ' Button1
