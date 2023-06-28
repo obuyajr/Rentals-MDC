@@ -127,8 +127,14 @@
   <data name="printer-solid-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer-solid-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="report-solid-24 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report-solid-24 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-circle-solid-84" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-circle-solid-84.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="building-house-solid-240" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\building-house-solid-240.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +166,7 @@
   <data name="reset-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reset-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-circle-solid-84" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-circle-solid-84.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-circle-solid-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-circle-solid-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

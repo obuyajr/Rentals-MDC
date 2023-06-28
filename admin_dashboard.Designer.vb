@@ -23,6 +23,8 @@ Partial Class admin_dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        lbl_uname = New Label()
+        Button9 = New Button()
         Button5 = New Button()
         Button8 = New Button()
         Button7 = New Button()
@@ -40,6 +42,8 @@ Partial Class admin_dashboard
         ' Panel1
         ' 
         Panel1.BackColor = Color.Indigo
+        Panel1.Controls.Add(lbl_uname)
+        Panel1.Controls.Add(Button9)
         Panel1.Controls.Add(Button5)
         Panel1.Controls.Add(Button8)
         Panel1.Controls.Add(Button7)
@@ -55,9 +59,31 @@ Partial Class admin_dashboard
         Panel1.Size = New Size(142, 616)
         Panel1.TabIndex = 0
         ' 
+        ' lbl_uname
+        ' 
+        lbl_uname.AutoSize = True
+        lbl_uname.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        lbl_uname.ForeColor = Color.Yellow
+        lbl_uname.Location = New Point(35, 56)
+        lbl_uname.Name = "lbl_uname"
+        lbl_uname.Size = New Size(71, 17)
+        lbl_uname.TabIndex = 11
+        lbl_uname.Text = "Username"
+        ' 
+        ' Button9
+        ' 
+        Button9.FlatAppearance.BorderSize = 0
+        Button9.FlatStyle = FlatStyle.Flat
+        Button9.Image = My.Resources.Resources.user_circle_solid_48
+        Button9.Location = New Point(5, 3)
+        Button9.Name = "Button9"
+        Button9.Size = New Size(134, 50)
+        Button9.TabIndex = 10
+        Button9.UseVisualStyleBackColor = True
+        ' 
         ' Button5
         ' 
-        Button5.Location = New Point(44, 337)
+        Button5.Location = New Point(12, 467)
         Button5.Name = "Button5"
         Button5.Size = New Size(75, 23)
         Button5.TabIndex = 9
@@ -75,7 +101,7 @@ Partial Class admin_dashboard
         Button8.ImageAlign = ContentAlignment.MiddleRight
         Button8.Location = New Point(3, 507)
         Button8.Name = "Button8"
-        Button8.Size = New Size(128, 40)
+        Button8.Size = New Size(136, 40)
         Button8.TabIndex = 8
         Button8.Text = "Reports"
         Button8.TextAlign = ContentAlignment.MiddleLeft
@@ -89,9 +115,9 @@ Partial Class admin_dashboard
         Button7.ForeColor = Color.White
         Button7.Image = My.Resources.Resources.reset_regular_24
         Button7.ImageAlign = ContentAlignment.MiddleRight
-        Button7.Location = New Point(1, 264)
+        Button7.Location = New Point(5, 328)
         Button7.Name = "Button7"
-        Button7.Size = New Size(128, 40)
+        Button7.Size = New Size(131, 40)
         Button7.TabIndex = 7
         Button7.Text = "Reset House"
         Button7.TextAlign = ContentAlignment.MiddleLeft
@@ -108,7 +134,7 @@ Partial Class admin_dashboard
         Button1.ImageAlign = ContentAlignment.MiddleRight
         Button1.Location = New Point(0, 564)
         Button1.Name = "Button1"
-        Button1.Size = New Size(142, 40)
+        Button1.Size = New Size(139, 40)
         Button1.TabIndex = 6
         Button1.Text = "EXIT"
         Button1.UseVisualStyleBackColor = True
@@ -121,9 +147,9 @@ Partial Class admin_dashboard
         Button6.ForeColor = Color.White
         Button6.Image = My.Resources.Resources.category_alt_solid_24
         Button6.ImageAlign = ContentAlignment.MiddleRight
-        Button6.Location = New Point(3, 214)
+        Button6.Location = New Point(5, 278)
         Button6.Name = "Button6"
-        Button6.Size = New Size(128, 40)
+        Button6.Size = New Size(131, 40)
         Button6.TabIndex = 5
         Button6.Text = "Assign Hse."
         Button6.TextAlign = ContentAlignment.MiddleLeft
@@ -137,7 +163,7 @@ Partial Class admin_dashboard
         btn_editTenant.ForeColor = Color.White
         btn_editTenant.Image = My.Resources.Resources.edit_regular_24
         btn_editTenant.ImageAlign = ContentAlignment.MiddleRight
-        btn_editTenant.Location = New Point(3, 168)
+        btn_editTenant.Location = New Point(5, 232)
         btn_editTenant.Name = "btn_editTenant"
         btn_editTenant.Size = New Size(128, 40)
         btn_editTenant.TabIndex = 4
@@ -153,7 +179,7 @@ Partial Class admin_dashboard
         Button4.ForeColor = Color.White
         Button4.Image = My.Resources.Resources.user_plus_regular_24
         Button4.ImageAlign = ContentAlignment.MiddleRight
-        Button4.Location = New Point(3, 122)
+        Button4.Location = New Point(5, 186)
         Button4.Name = "Button4"
         Button4.Size = New Size(128, 40)
         Button4.TabIndex = 3
@@ -169,7 +195,7 @@ Partial Class admin_dashboard
         Button3.ForeColor = Color.White
         Button3.Image = My.Resources.Resources.edit_alt_solid_24__1_
         Button3.ImageAlign = ContentAlignment.MiddleRight
-        Button3.Location = New Point(3, 76)
+        Button3.Location = New Point(5, 140)
         Button3.Name = "Button3"
         Button3.Size = New Size(128, 40)
         Button3.TabIndex = 2
@@ -185,7 +211,7 @@ Partial Class admin_dashboard
         Button2.ForeColor = Color.White
         Button2.Image = My.Resources.Resources.building_house_solid_24
         Button2.ImageAlign = ContentAlignment.MiddleRight
-        Button2.Location = New Point(3, 37)
+        Button2.Location = New Point(5, 101)
         Button2.Name = "Button2"
         Button2.Size = New Size(128, 40)
         Button2.TabIndex = 1
@@ -205,6 +231,7 @@ Partial Class admin_dashboard
         ' 
         ' Panel3
         ' 
+        Panel3.BackColor = Color.White
         Panel3.BackgroundImage = My.Resources.Resources.download__1_
         Panel3.BackgroundImageLayout = ImageLayout.Center
         Panel3.Dock = DockStyle.Fill
@@ -226,6 +253,7 @@ Partial Class admin_dashboard
         StartPosition = FormStartPosition.Manual
         Text = "admin_dashboard"
         Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -242,4 +270,6 @@ Partial Class admin_dashboard
     Friend WithEvents Button7 As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents lbl_uname As Label
 End Class

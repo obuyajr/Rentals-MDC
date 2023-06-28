@@ -26,6 +26,7 @@ Partial Class House_Category
         txt_category = New TextBox()
         Label1 = New Label()
         btn_addCategory = New Button()
+        Button1 = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -33,6 +34,7 @@ Partial Class House_Category
         ' 
         Panel1.BackColor = Color.CadetBlue
         Panel1.BorderStyle = BorderStyle.Fixed3D
+        Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(txt_category)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(btn_addCategory)
@@ -70,6 +72,16 @@ Partial Class House_Category
         btn_addCategory.Text = "Add"
         btn_addCategory.UseVisualStyleBackColor = False
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.White
+        Button1.Image = My.Resources.Resources.close1
+        Button1.Location = New Point(492, -2)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(32, 32)
+        Button1.TabIndex = 4
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' House_Category
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -91,4 +103,5 @@ Partial Class House_Category
     Friend WithEvents txt_category As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_addCategory As Button
+    Friend WithEvents Button1 As Button
 End Class

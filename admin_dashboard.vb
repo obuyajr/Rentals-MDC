@@ -65,7 +65,8 @@
         Me.Height = Screen.PrimaryScreen.WorkingArea.Height
     End Sub
 
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Panel3.Show()
 
-
-
+    End Sub
 End Class
