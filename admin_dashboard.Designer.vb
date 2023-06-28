@@ -64,7 +64,7 @@ Partial Class admin_dashboard
         lbl_uname.AutoSize = True
         lbl_uname.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         lbl_uname.ForeColor = Color.Yellow
-        lbl_uname.Location = New Point(35, 56)
+        lbl_uname.Location = New Point(42, 56)
         lbl_uname.Name = "lbl_uname"
         lbl_uname.Size = New Size(71, 17)
         lbl_uname.TabIndex = 11

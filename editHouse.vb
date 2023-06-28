@@ -75,6 +75,7 @@ Public Class editHouse
     End Sub
 
 
+
     '
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
@@ -127,48 +128,6 @@ Public Class editHouse
     Private Sub btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
 
 
-        ' Retrieve the selected row
-        Dim selectedRow As DataGridViewRow = Nothing
-
-        For Each row As DataGridViewRow In DataGridView1.Rows
-            If Convert.ToBoolean(row.Cells("Select").Value) Then
-                selectedRow = row
-                Exit For
-            End If
-        Next
-
-        ' Update the corresponding record in the database
-        If selectedRow IsNot Nothing Then
-            Dim houseNumber As String = Convert.ToString(selectedRow.Cells("house_number").Value)
-
-            Dim StrCmd As String = "UPDATE houses" &
-                          " SET location = '" & txt_location.Text & "'" &
-                          "   , category = '" & combo_category.SelectedItem.ToString() & "'" &
-                          "   , deposit = '" & txt_deposit.Text.Trim() & "'" &
-                          "   , rent = '" & txt_rent.Text.Trim() & "'" &
-                          " WHERE house_number = '" & houseNumber & "'"
-
-            cmd = New SqlCommand(StrCmd, con)
-
-            Try
-                MessageBox.Show("DETAILS EDITED SUCCESSFULLY", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-
-                cmd.ExecuteNonQuery()
-            Catch ex As Exception
-                MessageBox.Show(ex.Message)
-            Finally
-                cmd.Dispose()
-            End Try
-
-            ' Clear the textboxes and selection
-            txt_houseNo.Text = ""
-            txt_location.Text = ""
-            combo_category.SelectedIndex = -1
-            txt_deposit.Text = ""
-            txt_rent.Text = ""
-
-            UpdateGrid()
-        End If
 
 
     End Sub
