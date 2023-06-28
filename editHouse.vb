@@ -23,7 +23,8 @@ Public Class editHouse
         'open dB con
         con.Open()
 
-        ' SQL query to fetch data from the table
+
+        ' SQL query to fetch data from the category table
         Dim query As String = "SELECT DISTINCT house_type FROM category"
 
         ' Create a command to execute the query
@@ -39,6 +40,12 @@ Public Class editHouse
                 End While
             End Using
         End Using
+
+
+        'make the textboxes read only
+        txt_houseNo.ReadOnly = True
+        txt_location.ReadOnly = True
+
 
 
     End Sub
@@ -177,7 +184,7 @@ Public Class editHouse
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             Finally
-                con.Close()
+
             End Try
 
             cmd.Dispose()

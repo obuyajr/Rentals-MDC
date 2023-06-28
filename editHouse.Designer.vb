@@ -25,6 +25,8 @@ Partial Class editHouse
         btn_edit = New Button()
         Panel1 = New Panel()
         Panel2 = New Panel()
+        txtStatus = New TextBox()
+        Label3 = New Label()
         Button1 = New Button()
         combo_category = New ComboBox()
         txt_rent = New TextBox()
@@ -37,8 +39,6 @@ Partial Class editHouse
         Label2 = New Label()
         Label1 = New Label()
         DataGridView1 = New DataGridView()
-        txtStatus = New TextBox()
-        Label3 = New Label()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -64,7 +64,7 @@ Partial Class editHouse
         Panel1.Controls.Add(DataGridView1)
         Panel1.Location = New Point(2, 73)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(822, 400)
+        Panel1.Size = New Size(1208, 400)
         Panel1.TabIndex = 1
         ' 
         ' Panel2
@@ -85,10 +85,28 @@ Partial Class editHouse
         Panel2.Controls.Add(Label4)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(507, 3)
+        Panel2.Location = New Point(872, 3)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(308, 390)
+        Panel2.Size = New Size(329, 390)
         Panel2.TabIndex = 1
+        ' 
+        ' txtStatus
+        ' 
+        txtStatus.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txtStatus.Location = New Point(144, 280)
+        txtStatus.Name = "txtStatus"
+        txtStatus.Size = New Size(133, 28)
+        txtStatus.TabIndex = 25
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(71, 291)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(46, 17)
+        Label3.TabIndex = 24
+        Label3.Text = "Status"
         ' 
         ' Button1
         ' 
@@ -200,34 +218,17 @@ Partial Class editHouse
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Location = New Point(-2, -2)
         DataGridView1.Name = "DataGridView1"
+        DataGridView1.ReadOnly = True
         DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(503, 400)
+        DataGridView1.Size = New Size(868, 400)
         DataGridView1.TabIndex = 0
-        ' 
-        ' txtStatus
-        ' 
-        txtStatus.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        txtStatus.Location = New Point(144, 280)
-        txtStatus.Name = "txtStatus"
-        txtStatus.Size = New Size(133, 28)
-        txtStatus.TabIndex = 25
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(71, 291)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(46, 17)
-        Label3.TabIndex = 24
-        Label3.Text = "Status"
         ' 
         ' editHouse
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.LightGray
-        ClientSize = New Size(823, 568)
+        BackColor = Color.WhiteSmoke
+        ClientSize = New Size(1209, 568)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "editHouse"
