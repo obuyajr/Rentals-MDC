@@ -44,6 +44,7 @@ Partial Class editTenant
         Button2 = New Button()
         Button1 = New Button()
         txt_searchbox = New TextBox()
+        btn_generate = New Button()
         Panel1.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -284,12 +285,24 @@ Partial Class editTenant
         txt_searchbox.Size = New Size(358, 29)
         txt_searchbox.TabIndex = 3
         ' 
+        ' btn_generate
+        ' 
+        btn_generate.BackColor = Color.IndianRed
+        btn_generate.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        btn_generate.Location = New Point(493, 28)
+        btn_generate.Name = "btn_generate"
+        btn_generate.Size = New Size(105, 39)
+        btn_generate.TabIndex = 4
+        btn_generate.Text = "Generate"
+        btn_generate.UseVisualStyleBackColor = False
+        ' 
         ' editTenant
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1047, 692)
+        Controls.Add(btn_generate)
         Controls.Add(txt_searchbox)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
@@ -328,4 +341,5 @@ Partial Class editTenant
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents txt_searchbox As TextBox
+    Friend WithEvents btn_generate As Button
 End Class
