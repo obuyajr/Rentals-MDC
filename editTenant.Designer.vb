@@ -43,6 +43,7 @@ Partial Class editTenant
         Label1 = New Label()
         Button2 = New Button()
         Button1 = New Button()
+        txt_searchbox = New TextBox()
         Panel1.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -64,11 +65,11 @@ Partial Class editTenant
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(0, 3)
+        DataGridView1.Location = New Point(9, 3)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(580, 597)
+        DataGridView1.Size = New Size(571, 597)
         DataGridView1.TabIndex = 0
         ' 
         ' Panel2
@@ -275,12 +276,21 @@ Partial Class editTenant
         Button1.Text = "Edit"
         Button1.UseVisualStyleBackColor = False
         ' 
+        ' txt_searchbox
+        ' 
+        txt_searchbox.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txt_searchbox.Location = New Point(114, 33)
+        txt_searchbox.Name = "txt_searchbox"
+        txt_searchbox.Size = New Size(358, 29)
+        txt_searchbox.TabIndex = 3
+        ' 
         ' editTenant
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1047, 692)
+        Controls.Add(txt_searchbox)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
@@ -293,6 +303,7 @@ Partial Class editTenant
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel
@@ -316,4 +327,5 @@ Partial Class editTenant
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_searchbox As TextBox
 End Class
