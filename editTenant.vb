@@ -79,7 +79,68 @@ Public Class editTenant
         'AddHandler DataGridView1.CellContentClick, AddressOf DataGridView1_CellContentClick
     End Sub
 
+
+    '
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+
+        ' Handle the click event in the DataGridView cells
+        If e.ColumnIndex = DataGridView1.Columns("Select").Index AndAlso e.RowIndex >= 0 Then
+
+            ' Uncheck all other checkboxes
+            For Each row As DataGridViewRow In DataGridView1.Rows
+
+                If row.Index <> e.RowIndex AndAlso Convert.ToBoolean(row.Cells("Select").Value) Then
+
+                    row.Cells("Select").Value = False
+
+                End If
+
+            Next
+
+            ' Update the selected row's checkbox value
+            Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+            Dim isSelected As Boolean = Convert.ToBoolean(selectedRow.Cells("Select").Value)
+            selectedRow.Cells("Select").Value = Not isSelected
+
+            ' Update the room details text boxes if a room is selected
+            If selectedRow.Cells("Select").Value Then
+
+                txt_tenantName.Text = selectedRow.Cells("name").Value.ToString()
+                txt_telNo.Text = selectedRow.Cells("tel_number").Value.ToString()
+                txt_phone.Text = selectedRow.Cells("phone_no").Value.ToString()
+
+                txt_nationality.Text = selectedRow.Cells("nationality").Value.ToString()
+                txt_idNo.Text = selectedRow.Cells("id_no").Value.ToString()
+                txt_email.Text = selectedRow.Cells("emailaddress").Value.ToString()
+                txt_nok_name.Text = selectedRow.Cells("nok_name").Value.ToString()
+                txt_nok_phone.Text = selectedRow.Cells("nok_phone").Value.ToString()
+
+
+
+            Else
+
+                ' If the checkbox is unchecked, clear the TextBox
+                txt_tenantName.Text = ""
+                txt_telNo.Text = ""
+                txt_phone.Text = ""
+                txt_nationality.Text = ""
+                txt_idNo.Text = ""
+                txt_email.Text = ""
+                txt_nok_name.Text = ""
+                txt_nok_phone.Text = ""
+
+            End If
+
+        End If
+
+    End Sub
+    '
+
     Private Sub txt_searchbox_TextChanged(sender As Object, e As EventArgs) Handles txt_searchbox.TextChanged
+
+        txt_searchbox.CharacterCasing = CharacterCasing.Upper
+
         ' Clear the existing data in the grid
         DataGridView1.Rows.Clear()
 
