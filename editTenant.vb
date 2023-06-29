@@ -79,4 +79,37 @@ Public Class editTenant
         'AddHandler DataGridView1.CellContentClick, AddressOf DataGridView1_CellContentClick
     End Sub
 
+    Private Sub txt_searchbox_TextChanged(sender As Object, e As EventArgs) Handles txt_searchbox.TextChanged
+        ' Clear the existing data in the grid
+        DataGridView1.Rows.Clear()
+
+        ' Retrieve the search keyword from the text box
+        Dim searchKeyword As String = txt_searchbox.Text.Trim()
+
+        ' Construct the query to search for matching records
+        Dim query As String = "SELECT * FROM tenants WHERE name LIKE '%' + @keyword + '%'" ' Assuming you want to search by the 'name' field
+
+        Using adapter As New SqlDataAdapter(query, con)
+            adapter.SelectCommand.Parameters.AddWithValue("@keyword", searchKeyword)
+
+            Dim dataTable As New DataTable()
+            adapter.Fill(dataTable)
+
+            ' Populate the grid with the retrieved data
+            For Each row As DataRow In dataTable.Rows
+                Dim tenantID As String = row("tenant_id").ToString()
+                Dim name As String = row("name").ToString()
+                Dim TelNo As String = row("tel_number").ToString()
+                Dim PhoneNo As String = row("phone_no").ToString()
+                Dim nationality As String = row("nationality").ToString()
+                Dim idNo As String = row("id_no").ToString()
+                Dim email As String = row("emailaddress").ToString()
+                Dim nokName As String = row("nok_name").ToString()
+                Dim nokPhone As String = row("nok_phone").ToString()
+
+                DataGridView1.Rows.Add(False, tenantID, name, TelNo, PhoneNo, nationality, idNo, email, nokName, nokPhone)
+            Next
+        End Using
+
+    End Sub
 End Class
