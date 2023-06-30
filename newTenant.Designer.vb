@@ -52,7 +52,7 @@ Partial Class newTenant
         ' Panel1
         ' 
         Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel1.BackColor = Color.WhiteSmoke
+        Panel1.BackColor = Color.LightCoral
         Panel1.BorderStyle = BorderStyle.Fixed3D
         Panel1.Controls.Add(txt_email)
         Panel1.Controls.Add(txt_idNo)
@@ -193,7 +193,7 @@ Partial Class newTenant
         ' Panel2
         ' 
         Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel2.BackColor = Color.WhiteSmoke
+        Panel2.BackColor = Color.LightCoral
         Panel2.BorderStyle = BorderStyle.Fixed3D
         Panel2.Controls.Add(Label10)
         Panel2.Controls.Add(Label9)
@@ -252,7 +252,7 @@ Partial Class newTenant
         ' Panel3
         ' 
         Panel3.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel3.BackColor = Color.WhiteSmoke
+        Panel3.BackColor = Color.DarkGray
         Panel3.BorderStyle = BorderStyle.FixedSingle
         Panel3.Controls.Add(btn_addTenant)
         Panel3.Location = New Point(2, 568)
@@ -262,7 +262,7 @@ Partial Class newTenant
         ' 
         ' btn_addTenant
         ' 
-        btn_addTenant.BackColor = Color.RosyBrown
+        btn_addTenant.BackColor = Color.Brown
         btn_addTenant.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         btn_addTenant.Location = New Point(133, 20)
         btn_addTenant.Name = "btn_addTenant"

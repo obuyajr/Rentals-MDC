@@ -188,4 +188,75 @@ Public Class editTenant
         txt_nok_name.CharacterCasing = CharacterCasing.Upper
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        ' Retrieve the selected row
+        Dim selectedRow As DataGridViewRow = Nothing
+
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            If Convert.ToBoolean(row.Cells("Select").Value) Then
+                selectedRow = row
+                Exit For
+            End If
+        Next
+
+        ' Update the corresponding record in the database
+        If selectedRow IsNot Nothing Then
+            Dim tenantID As String = Convert.ToString(selectedRow.Cells("tenant_id").Value)
+
+
+
+            ' Update the record using a parameterized query
+            Dim query As String = "UPDATE tenants SET name = @name, tel_number = @tel_number, phone_no = @phoneNo,
+                                                             nationality = @nationality, id_no = @idNo,
+                                                             emailaddress = @email, nok_name = @nok_name,
+                                                             nok_phone = @nok_phone WHERE tenant_id = @tenantId"
+
+            Dim cmd As SqlCommand = New SqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@name", txt_tenantName.Text)
+            cmd.Parameters.AddWithValue("@tel_number", txt_telNo.Text)
+            cmd.Parameters.AddWithValue("@phoneNo", txt_phone.Text)
+            cmd.Parameters.AddWithValue("@nationality", txt_nationality.Text)
+            cmd.Parameters.AddWithValue("@idNo", txt_idNo.Text)
+            cmd.Parameters.AddWithValue("@email", txt_email.Text)
+            cmd.Parameters.AddWithValue("@nok_name", txt_nok_name.Text)
+            cmd.Parameters.AddWithValue("@nok_phone", txt_nok_phone.Text)
+            cmd.Parameters.AddWithValue("@tenantId", tenantID)
+
+            Try
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("TENANT DETAILS EDITED SUCCESSFULLY")
+
+            Catch ex As Exception
+
+                MessageBox.Show(ex.Message)
+
+            Finally
+
+                'con.Close()
+                cmd.Dispose()
+            End Try
+
+            ' Clear the textboxes and selection
+            txt_nok_name.Text = ""
+            txt_nationality.Text = ""
+            txt_idNo.Text = ""
+            txt_nok_phone.Text = ""
+            txt_phone.Text = ""
+            txt_email.Text = ""
+            txt_telNo.Text = ""
+            txt_tenantName.Text = ""
+            txt_searchbox.Text = ""
+
+            ' Refresh the grid
+            UpdateGrid()
+        Else
+            MessageBox.Show("No Tenant selected.")
+        End If
+
+
+
+
+    End Sub
 End Class

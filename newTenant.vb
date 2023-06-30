@@ -9,7 +9,7 @@ Public Class newTenant
         con.ConnectionString = "Data Source=DESKTOP-KCVKSCU;Initial Catalog=rentals;Integrated Security=True;Pooling=False"
         con.Open()
 
-
+        'textboxes to take uppercase
         txt_name.CharacterCasing = CharacterCasing.Upper
         txt_telno.CharacterCasing = CharacterCasing.Upper
         txt_phoneNo.CharacterCasing = CharacterCasing.Upper
