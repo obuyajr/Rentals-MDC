@@ -36,7 +36,7 @@ Partial Class House_Renting
         Panel3 = New Panel()
         Panel6 = New Panel()
         Button2 = New Button()
-        Button1 = New Button()
+        btn_rentHouse = New Button()
         Panel4 = New Panel()
         txt_status = New TextBox()
         txt_rent = New TextBox()
@@ -214,7 +214,7 @@ Partial Class House_Renting
         ' 
         Panel6.BorderStyle = BorderStyle.FixedSingle
         Panel6.Controls.Add(Button2)
-        Panel6.Controls.Add(Button1)
+        Panel6.Controls.Add(btn_rentHouse)
         Panel6.Location = New Point(9, 544)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(464, 60)
@@ -230,15 +230,15 @@ Partial Class House_Renting
         Button2.Text = "Clear"
         Button2.UseVisualStyleBackColor = True
         ' 
-        ' Button1
+        ' btn_rentHouse
         ' 
-        Button1.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.Location = New Point(106, 12)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(127, 35)
-        Button1.TabIndex = 0
-        Button1.Text = "Rent House"
-        Button1.UseVisualStyleBackColor = True
+        btn_rentHouse.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        btn_rentHouse.Location = New Point(106, 12)
+        btn_rentHouse.Name = "btn_rentHouse"
+        btn_rentHouse.Size = New Size(127, 35)
+        btn_rentHouse.TabIndex = 0
+        btn_rentHouse.Text = "Rent House"
+        btn_rentHouse.UseVisualStyleBackColor = True
         ' 
         ' Panel4
         ' 
@@ -633,7 +633,7 @@ Partial Class House_Renting
     Friend WithEvents Label17 As Label
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_rentHouse As Button
     Friend WithEvents rd_btn1 As RadioButton
     Friend WithEvents Label18 As Label
 End Class

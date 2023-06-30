@@ -185,6 +185,7 @@ Public Class House_Renting
     '
     Private Sub UpdateGrid()
         ' Clear the existing data in the grid
+        DataGridView1.DataSource = Nothing
         DataGridView1.Rows.Clear()
         DataGridView1.Columns.Clear()
 
@@ -334,26 +335,90 @@ Public Class House_Renting
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim payment As New payment()
+    Private Sub SaveRentAccount(houseNo As String, location As String, category As String, deposit As Decimal, rent As Decimal, tenantName As String, telNo As String, phoneNo As String, nationality As String, idNo As String, email As String, nokName As String, nokPhone As String)
+        Dim query As String = "INSERT INTO rent (house_no, location, category, deposit, rent, tenant_name, tel_no, phone_no, nationality, ID_no, email, nok_name, nok_phone) VALUES (@HouseNo, @Location, @Category, @Deposit, @Rent, @TenantName, @TelNo, @PhoneNo, @Nationality, @IDNo, @Email, @NokName, @NokPhone)"
+
+        Using cmd As New SqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@HouseNo", houseNo)
+            cmd.Parameters.AddWithValue("@Location", location)
+            cmd.Parameters.AddWithValue("@Category", category)
+            cmd.Parameters.AddWithValue("@Deposit", deposit)
+            cmd.Parameters.AddWithValue("@Rent", rent)
+            cmd.Parameters.AddWithValue("@TenantName", tenantName)
+            cmd.Parameters.AddWithValue("@TelNo", telNo)
+            cmd.Parameters.AddWithValue("@PhoneNo", phoneNo)
+            cmd.Parameters.AddWithValue("@Nationality", nationality)
+            cmd.Parameters.AddWithValue("@IDNo", idNo)
+            cmd.Parameters.AddWithValue("@Email", email)
+            cmd.Parameters.AddWithValue("@NokName", nokName)
+            cmd.Parameters.AddWithValue("@NokPhone", nokPhone)
+
+            cmd.ExecuteNonQuery()
+        End Using
+
+        ' Update the house_status column in the houses table
+        Dim updateQuery As String = "UPDATE houses SET status = 'OCCUPIED' WHERE house_number = @HouseNo"
+
+        Using updateCmd As New SqlCommand(updateQuery, con)
+            updateCmd.Parameters.AddWithValue("@HouseNo", houseNo)
+            updateCmd.ExecuteNonQuery()
+        End Using
+
+        txt_houseNo.Text = ""
+        txt_location.Text = ""
+        txt_category.Text = ""
+        txt_deposit.Text = ""
+        txt_rent.Text = ""
+        txt_deposit.Text = ""
+        combo_tenant_name.Text = ""
+        txt_telno.Text = ""
+        txt_phone.Text = ""
+        txt_nationality.Text = ""
+        txt_idno.Text = ""
+        txt_email.Text = ""
+        txt_nok_name.Text = ""
+        txt_nok_phone.Text = ""
 
 
 
+    End Sub
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_rentHouse.Click
+
+
+        '
         ' Check if the radio button is checked
         If rd_btn1.Checked Then
-            ' Calculate the total payment by adding the deposit to the rent
+            ' Retrieve the data from the houses table
+            Dim houseNo As String = txt_houseNo.Text
+            Dim location As String = txt_location.Text
+            Dim category As String = txt_category.Text
             Dim deposit As Decimal = Decimal.Parse(txt_deposit.Text)
             Dim rent As Decimal = Decimal.Parse(txt_rent.Text)
-            Dim totalPayment As Decimal = deposit + rent
+            Dim tenantName As String = combo_tenant_name.Text
+            Dim telNo As String = txt_telno.Text
+            Dim phoneNo As String = txt_phone.Text
+            Dim nationality As String = txt_nationality.Text
+            Dim idNo As String = txt_idno.Text
+            Dim email As String = txt_email.Text
+            Dim nokName As String = txt_nok_name.Text
+            Dim nokPhone As String = txt_nok_phone.Text
 
-            ' Pass the total payment to the Payment form
-            payment.SetPayment(totalPayment)
-            payment.Show()
+            ' Multiply deposit and rent by -1 to make them negative
+            deposit *= -1
+            rent *= -1
 
+
+            ' Save the data to the rent_accounts table
+            SaveRentAccount(houseNo, location, category, deposit, rent, tenantName, telNo, phoneNo, nationality, idNo, email, nokName, nokPhone)
+
+            MessageBox.Show("Rent account created successfully.")
+            UpdateGrid()
 
         Else
-            MessageBox.Show(" Please Check the Box!! ")
 
+            MessageBox.Show("Please check the box!")
 
         End If
 
@@ -361,11 +426,13 @@ Public Class House_Renting
 
 
 
+
+
+
+
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rd_btn1.CheckedChanged
 
-    End Sub
 
 
 
