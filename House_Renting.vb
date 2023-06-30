@@ -146,6 +146,41 @@ Public Class House_Renting
 
     Private Sub btn_generate_Click(sender As Object, e As EventArgs) Handles btn_generate.Click
 
+        '' Get the selected values from the ComboBoxes
+        'Dim selectedCategory As String = combo_category.SelectedItem.ToString()
+        'Dim selectedLocation As String = combo_location.SelectedItem.ToString()
+        'Dim selectedStatus As String = combo_status.SelectedItem.ToString()
+
+        '' SQL query to fetch data from the table based on the selected values
+        'Dim query As String = "SELECT * FROM houses WHERE category = @category AND location = @location AND status = @status"
+
+        '' Create a command with the query and parameterize the values
+        'Using cmd As New SqlCommand(query, con)
+        '    cmd.Parameters.AddWithValue("@category", selectedCategory)
+        '    cmd.Parameters.AddWithValue("@location", selectedLocation)
+        '    cmd.Parameters.AddWithValue("@status", selectedStatus)
+
+        '    ' Create a DataTable to store the fetched data
+        '    Dim dataTable As New DataTable()
+
+        '    ' Create a SqlDataAdapter to fill the DataTable with the query results
+        '    Using adapter As New SqlDataAdapter(cmd)
+        '        adapter.Fill(dataTable)
+
+        '        ' Add the checkbox column to the DataGridView
+        '        Dim checkBoxColumn As New DataGridViewCheckBoxColumn()
+        '        checkBoxColumn.Name = "Select"
+        '        checkBoxColumn.HeaderText = "Select"
+        '        DataGridView1.Columns.Add(checkBoxColumn)
+
+        '    End Using
+
+        '    ' Set the DataTable as the data source for the DataGridView
+        '    DataGridView1.DataSource = dataTable
+        'End Using
+
+
+        '
         ' Get the selected values from the ComboBoxes
         Dim selectedCategory As String = combo_category.SelectedItem.ToString()
         Dim selectedLocation As String = combo_location.SelectedItem.ToString()
@@ -172,31 +207,37 @@ Public Class House_Renting
                 checkBoxColumn.Name = "Select"
                 checkBoxColumn.HeaderText = "Select"
                 DataGridView1.Columns.Add(checkBoxColumn)
-
             End Using
 
             ' Set the DataTable as the data source for the DataGridView
             DataGridView1.DataSource = dataTable
         End Using
+        '
 
     End Sub
 
 
     '
     Private Sub UpdateGrid()
-        ' Clear the existing data in the grid
-        DataGridView1.DataSource = Nothing
-        DataGridView1.Rows.Clear()
-        DataGridView1.Columns.Clear()
+        ' Get the selected values from the ComboBoxes
+        Dim selectedCategory As String = combo_category.SelectedItem.ToString()
+        Dim selectedLocation As String = combo_location.SelectedItem.ToString()
+        Dim selectedStatus As String = combo_status.SelectedItem.ToString()
 
-        ' Retrieve updated data from the database and populate the grid
+        ' SQL query to fetch data from the table based on the selected values
         Dim query As String = "SELECT * FROM houses WHERE category = @category AND location = @location AND status = @status"
 
-        Using con As New SqlConnection("Data Source=DESKTOP-KCVKSCU;Initial Catalog=rentals;Integrated Security=True;Pooling=False")
-            con.Open()
+        ' Create a command with the query and parameterize the values
+        Using cmd As New SqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@category", selectedCategory)
+            cmd.Parameters.AddWithValue("@location", selectedLocation)
+            cmd.Parameters.AddWithValue("@status", selectedStatus)
 
-            Using adapter As New SqlDataAdapter(query, con)
-                Dim dataTable As New DataTable()
+            ' Create a DataTable to store the fetched data
+            Dim dataTable As New DataTable()
+
+            ' Create a SqlDataAdapter to fill the DataTable with the query results
+            Using adapter As New SqlDataAdapter(cmd)
                 adapter.Fill(dataTable)
 
                 ' Add the checkbox column to the DataGridView
@@ -204,27 +245,10 @@ Public Class House_Renting
                 checkBoxColumn.Name = "Select"
                 checkBoxColumn.HeaderText = "Select"
                 DataGridView1.Columns.Add(checkBoxColumn)
-
-                ' Add the remaining columns to the DataGridView
-                DataGridView1.Columns.Add("house_number", "House No.")
-                DataGridView1.Columns.Add("location", "Location")
-                DataGridView1.Columns.Add("category", "Category")
-                DataGridView1.Columns.Add("deposit", "Deposit")
-                DataGridView1.Columns.Add("rent", "Rent")
-                DataGridView1.Columns.Add("status", "Status")
-
-                ' Populate the grid with the retrieved data
-                For Each row As DataRow In dataTable.Rows
-                    Dim houseNo As String = row("house_number").ToString()
-                    Dim location As String = row("location").ToString()
-                    Dim category As String = row("category").ToString()
-                    Dim deposit As String = row("deposit").ToString()
-                    Dim rent As String = row("rent").ToString()
-                    Dim status As String = row("status").ToString()
-
-                    DataGridView1.Rows.Add(False, houseNo, location, category, deposit, rent, status)
-                Next
             End Using
+
+            ' Set the DataTable as the data source for the DataGridView
+            DataGridView1.DataSource = dataTable
         End Using
 
         ' Attach the CellContentClick event handler to the DataGridView
@@ -381,6 +405,7 @@ Public Class House_Renting
 
 
 
+
     End Sub
 
 
@@ -415,6 +440,7 @@ Public Class House_Renting
 
             MessageBox.Show("Rent account created successfully.")
             UpdateGrid()
+
 
         Else
 
