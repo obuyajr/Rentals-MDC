@@ -15,7 +15,6 @@ Public Class newTenant
         txt_phoneNo.CharacterCasing = CharacterCasing.Upper
         txt_nationality.CharacterCasing = CharacterCasing.Upper
         txt_idNo.CharacterCasing = CharacterCasing.Upper
-        txt_email.CharacterCasing = CharacterCasing.Upper
         txt_nok_name.CharacterCasing = CharacterCasing.Upper
         txt_nok_phone.CharacterCasing = CharacterCasing.Upper
 

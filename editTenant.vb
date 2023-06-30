@@ -30,6 +30,7 @@ Public Class editTenant
 
 
     Private Sub UpdateGrid()
+
         ' Clear the existing data in the grid
         DataGridView1.Rows.Clear()
         DataGridView1.Columns.Clear()
@@ -61,6 +62,7 @@ Public Class editTenant
 
             ' Populate the grid with the retrieved data
             For Each row As DataRow In dataTable.Rows
+
                 Dim tenantID As String = row("tenant_id").ToString()
                 Dim name As String = row("name").ToString()
                 Dim TelNo As String = row("tel_number").ToString()
@@ -72,11 +74,12 @@ Public Class editTenant
                 Dim nokPhone As String = row("nok_phone").ToString()
 
                 DataGridView1.Rows.Add(False, tenantID, name, TelNo, PhoneNo, nationality, idNo, email, nokName, nokPhone)
+
             Next
+
         End Using
 
-        ' Attach the CellContentClick event handler to the DataGridView
-        'AddHandler DataGridView1.CellContentClick, AddressOf DataGridView1_CellContentClick
+
     End Sub
 
 
@@ -158,6 +161,7 @@ Public Class editTenant
 
             ' Populate the grid with the retrieved data
             For Each row As DataRow In dataTable.Rows
+
                 Dim tenantID As String = row("tenant_id").ToString()
                 Dim name As String = row("name").ToString()
                 Dim TelNo As String = row("tel_number").ToString()
@@ -169,7 +173,9 @@ Public Class editTenant
                 Dim nokPhone As String = row("nok_phone").ToString()
 
                 DataGridView1.Rows.Add(False, tenantID, name, TelNo, PhoneNo, nationality, idNo, email, nokName, nokPhone)
+
             Next
+
         End Using
 
     End Sub
@@ -196,15 +202,19 @@ Public Class editTenant
 
         For Each row As DataGridViewRow In DataGridView1.Rows
             If Convert.ToBoolean(row.Cells("Select").Value) Then
+
                 selectedRow = row
+
                 Exit For
+
             End If
+
         Next
 
         ' Update the corresponding record in the database
         If selectedRow IsNot Nothing Then
-            Dim tenantID As String = Convert.ToString(selectedRow.Cells("tenant_id").Value)
 
+            Dim tenantID As String = Convert.ToString(selectedRow.Cells("tenant_id").Value)
 
 
             ' Update the record using a parameterized query
@@ -225,6 +235,7 @@ Public Class editTenant
             cmd.Parameters.AddWithValue("@tenantId", tenantID)
 
             Try
+
                 cmd.ExecuteNonQuery()
                 MessageBox.Show("TENANT DETAILS EDITED SUCCESSFULLY")
 
@@ -234,8 +245,8 @@ Public Class editTenant
 
             Finally
 
-                'con.Close()
                 cmd.Dispose()
+
             End Try
 
             ' Clear the textboxes and selection
@@ -251,12 +262,16 @@ Public Class editTenant
 
             ' Refresh the grid
             UpdateGrid()
+
         Else
+
             MessageBox.Show("No Tenant selected.")
+
         End If
 
 
 
 
     End Sub
+
 End Class
