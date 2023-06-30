@@ -173,4 +173,19 @@ Public Class editTenant
         End Using
 
     End Sub
+
+    Private Sub txt_tenantName_TextChanged(sender As Object, e As EventArgs) Handles txt_tenantName.TextChanged
+        txt_tenantName.CharacterCasing = CharacterCasing.Upper
+
+    End Sub
+
+    Private Sub txt_nationality_TextChanged(sender As Object, e As EventArgs) Handles txt_nationality.TextChanged
+        txt_nationality.CharacterCasing = CharacterCasing.Upper
+
+    End Sub
+
+    Private Sub txt_nok_name_TextChanged(sender As Object, e As EventArgs) Handles txt_nok_name.TextChanged
+        txt_nok_name.CharacterCasing = CharacterCasing.Upper
+
+    End Sub
 End Class

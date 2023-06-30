@@ -10,6 +10,17 @@ Public Class newTenant
         con.Open()
 
 
+        txt_name.CharacterCasing = CharacterCasing.Upper
+        txt_telno.CharacterCasing = CharacterCasing.Upper
+        txt_phoneNo.CharacterCasing = CharacterCasing.Upper
+        txt_nationality.CharacterCasing = CharacterCasing.Upper
+        txt_idNo.CharacterCasing = CharacterCasing.Upper
+        txt_email.CharacterCasing = CharacterCasing.Upper
+        txt_nok_name.CharacterCasing = CharacterCasing.Upper
+        txt_nok_phone.CharacterCasing = CharacterCasing.Upper
+
+
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_addTenant.Click
