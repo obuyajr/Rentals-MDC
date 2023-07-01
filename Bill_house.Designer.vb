@@ -23,14 +23,14 @@ Partial Class Bill_house
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        ComboBox1 = New ComboBox()
         Label1 = New Label()
+        ComboBox1 = New ComboBox()
         Panel2 = New Panel()
-        Label2 = New Label()
-        Label3 = New Label()
+        CheckBox1 = New CheckBox()
         Label4 = New Label()
         Label5 = New Label()
-        CheckBox1 = New CheckBox()
+        Label3 = New Label()
+        Label2 = New Label()
         Panel3 = New Panel()
         Button1 = New Button()
         Panel1.SuspendLayout()
@@ -46,17 +46,8 @@ Partial Class Bill_house
         Panel1.Controls.Add(ComboBox1)
         Panel1.Location = New Point(12, 56)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(315, 186)
+        Panel1.Size = New Size(315, 273)
         Panel1.TabIndex = 0
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(122, 30)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(162, 29)
-        ComboBox1.TabIndex = 0
         ' 
         ' Label1
         ' 
@@ -67,6 +58,15 @@ Partial Class Bill_house
         Label1.Size = New Size(87, 17)
         Label1.TabIndex = 1
         Label1.Text = "Select House"
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.Font = New Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(122, 30)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(162, 29)
+        ComboBox1.TabIndex = 0
         ' 
         ' Panel2
         ' 
@@ -82,27 +82,17 @@ Partial Class Bill_house
         Panel2.Size = New Size(339, 273)
         Panel2.TabIndex = 1
         ' 
-        ' Label2
+        ' CheckBox1
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.ForeColor = Color.Fuchsia
-        Label2.Location = New Point(115, 43)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(89, 21)
-        Label2.TabIndex = 0
-        Label2.Text = "LOCATION"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.ForeColor = Color.Fuchsia
-        Label3.Location = New Point(115, 81)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(91, 21)
-        Label3.TabIndex = 1
-        Label3.Text = "CATEGORY"
+        CheckBox1.AutoSize = True
+        CheckBox1.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        CheckBox1.ForeColor = Color.DodgerBlue
+        CheckBox1.Location = New Point(115, 220)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(142, 24)
+        CheckBox1.TabIndex = 4
+        CheckBox1.Text = "Include Deposit"
+        CheckBox1.UseVisualStyleBackColor = True
         ' 
         ' Label4
         ' 
@@ -126,17 +116,27 @@ Partial Class Bill_house
         Label5.TabIndex = 2
         Label5.Text = "MONTHLY RENT"
         ' 
-        ' CheckBox1
+        ' Label3
         ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        CheckBox1.ForeColor = Color.DodgerBlue
-        CheckBox1.Location = New Point(115, 220)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(142, 24)
-        CheckBox1.TabIndex = 4
-        CheckBox1.Text = "Include Deposit"
-        CheckBox1.UseVisualStyleBackColor = True
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.ForeColor = Color.Fuchsia
+        Label3.Location = New Point(115, 81)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(91, 21)
+        Label3.TabIndex = 1
+        Label3.Text = "CATEGORY"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Fuchsia
+        Label2.Location = New Point(115, 43)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(89, 21)
+        Label2.TabIndex = 0
+        Label2.Text = "LOCATION"
         ' 
         ' Panel3
         ' 
