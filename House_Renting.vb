@@ -408,6 +408,25 @@ Public Class House_Renting
 
     End Sub
 
+    Private Sub saveToHouseAccounts(houseNo As String, location As String, category As String, Total As Decimal)
+        Dim query As String = "INSERT INTO House_Accounts (house_no, location, category, total) VALUES (@HouseNo, @Location, @Category, @total)"
+
+
+        Total = txt_total_amount.Text
+
+        Using cmd As New SqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@HouseNo", houseNo)
+            cmd.Parameters.AddWithValue("@Location", location)
+            cmd.Parameters.AddWithValue("@Category", category)
+            cmd.Parameters.AddWithValue("@total", txt_total_amount)
+
+            cmd.ExecuteNonQuery()
+
+        End Using
+
+
+    End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_rentHouse.Click
 
@@ -429,15 +448,17 @@ Public Class House_Renting
             Dim email As String = txt_email.Text
             Dim nokName As String = txt_nok_name.Text
             Dim nokPhone As String = txt_nok_phone.Text
+            Dim Total As Decimal = txt_total_amount.Text
+
 
             ' Multiply deposit and rent by -1 to make them negative
-            deposit *= -1
-            rent *= -1
+            deposit *= 0
+            rent *= 0
 
 
             ' Save the data to the rent_accounts table
             SaveRentAccount(houseNo, location, category, deposit, rent, tenantName, telNo, phoneNo, nationality, idNo, email, nokName, nokPhone)
-
+            saveToHouseAccounts(houseNo, location, category, Total)
             MessageBox.Show("Rent account created successfully.")
             UpdateGrid()
 

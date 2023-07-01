@@ -69,6 +69,8 @@ Partial Class House_Renting
         Label15 = New Label()
         Label16 = New Label()
         txt_idno = New TextBox()
+        Label20 = New Label()
+        txt_total_amount = New TextBox()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -374,6 +376,8 @@ Partial Class House_Renting
         ' 
         Panel5.BackColor = Color.PeachPuff
         Panel5.BorderStyle = BorderStyle.Fixed3D
+        Panel5.Controls.Add(txt_total_amount)
+        Panel5.Controls.Add(Label20)
         Panel5.Controls.Add(Label18)
         Panel5.Controls.Add(rd_btn1)
         Panel5.Controls.Add(txt_nok_phone)
@@ -394,7 +398,7 @@ Partial Class House_Renting
         Panel5.Controls.Add(txt_idno)
         Panel5.Location = New Point(3, 145)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(476, 359)
+        Panel5.Size = New Size(476, 393)
         Panel5.TabIndex = 2
         ' 
         ' Label18
@@ -563,6 +567,24 @@ Partial Class House_Renting
         txt_idno.Size = New Size(163, 25)
         txt_idno.TabIndex = 10
         ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Font = New Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label20.Location = New Point(9, 350)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(82, 30)
+        Label20.TabIndex = 21
+        Label20.Text = "TOTAL"
+        ' 
+        ' txt_total_amount
+        ' 
+        txt_total_amount.Font = New Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txt_total_amount.Location = New Point(111, 347)
+        txt_total_amount.Name = "txt_total_amount"
+        txt_total_amount.Size = New Size(127, 35)
+        txt_total_amount.TabIndex = 22
+        ' 
         ' House_Renting
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -636,4 +658,6 @@ Partial Class House_Renting
     Friend WithEvents btn_rentHouse As Button
     Friend WithEvents rd_btn1 As RadioButton
     Friend WithEvents Label18 As Label
+    Friend WithEvents txt_total_amount As TextBox
+    Friend WithEvents Label20 As Label
 End Class

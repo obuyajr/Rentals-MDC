@@ -26,11 +26,11 @@ Partial Class Bill_house
         Label1 = New Label()
         ComboBox1 = New ComboBox()
         Panel2 = New Panel()
-        CheckBox1 = New CheckBox()
-        Label4 = New Label()
-        Label5 = New Label()
-        Label3 = New Label()
-        Label2 = New Label()
+        chkbox_include_deposit = New CheckBox()
+        lbl_deposit = New Label()
+        lbl_rent = New Label()
+        lbl_category = New Label()
+        lbl_location = New Label()
         Panel3 = New Panel()
         Button1 = New Button()
         Panel1.SuspendLayout()
@@ -72,71 +72,71 @@ Partial Class Bill_house
         ' 
         Panel2.BackColor = Color.White
         Panel2.BorderStyle = BorderStyle.Fixed3D
-        Panel2.Controls.Add(CheckBox1)
-        Panel2.Controls.Add(Label4)
-        Panel2.Controls.Add(Label5)
-        Panel2.Controls.Add(Label3)
-        Panel2.Controls.Add(Label2)
+        Panel2.Controls.Add(chkbox_include_deposit)
+        Panel2.Controls.Add(lbl_deposit)
+        Panel2.Controls.Add(lbl_rent)
+        Panel2.Controls.Add(lbl_category)
+        Panel2.Controls.Add(lbl_location)
         Panel2.Location = New Point(487, 42)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(339, 273)
         Panel2.TabIndex = 1
         ' 
-        ' CheckBox1
+        ' chkbox_include_deposit
         ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
-        CheckBox1.ForeColor = Color.DodgerBlue
-        CheckBox1.Location = New Point(115, 220)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(142, 24)
-        CheckBox1.TabIndex = 4
-        CheckBox1.Text = "Include Deposit"
-        CheckBox1.UseVisualStyleBackColor = True
+        chkbox_include_deposit.AutoSize = True
+        chkbox_include_deposit.Font = New Font("Segoe UI Black", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        chkbox_include_deposit.ForeColor = Color.DodgerBlue
+        chkbox_include_deposit.Location = New Point(115, 220)
+        chkbox_include_deposit.Name = "chkbox_include_deposit"
+        chkbox_include_deposit.Size = New Size(142, 24)
+        chkbox_include_deposit.TabIndex = 4
+        chkbox_include_deposit.Text = "Include Deposit"
+        chkbox_include_deposit.UseVisualStyleBackColor = True
         ' 
-        ' Label4
+        ' lbl_deposit
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.ForeColor = Color.Fuchsia
-        Label4.Location = New Point(115, 122)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(76, 21)
-        Label4.TabIndex = 3
-        Label4.Text = "DEPOSIT"
+        lbl_deposit.AutoSize = True
+        lbl_deposit.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        lbl_deposit.ForeColor = Color.Fuchsia
+        lbl_deposit.Location = New Point(115, 122)
+        lbl_deposit.Name = "lbl_deposit"
+        lbl_deposit.Size = New Size(76, 21)
+        lbl_deposit.TabIndex = 3
+        lbl_deposit.Text = "DEPOSIT"
         ' 
-        ' Label5
+        ' lbl_rent
         ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label5.ForeColor = Color.Fuchsia
-        Label5.Location = New Point(115, 161)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(133, 21)
-        Label5.TabIndex = 2
-        Label5.Text = "MONTHLY RENT"
+        lbl_rent.AutoSize = True
+        lbl_rent.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        lbl_rent.ForeColor = Color.Fuchsia
+        lbl_rent.Location = New Point(115, 161)
+        lbl_rent.Name = "lbl_rent"
+        lbl_rent.Size = New Size(133, 21)
+        lbl_rent.TabIndex = 2
+        lbl_rent.Text = "MONTHLY RENT"
         ' 
-        ' Label3
+        ' lbl_category
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.ForeColor = Color.Fuchsia
-        Label3.Location = New Point(115, 81)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(91, 21)
-        Label3.TabIndex = 1
-        Label3.Text = "CATEGORY"
+        lbl_category.AutoSize = True
+        lbl_category.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        lbl_category.ForeColor = Color.Fuchsia
+        lbl_category.Location = New Point(115, 81)
+        lbl_category.Name = "lbl_category"
+        lbl_category.Size = New Size(91, 21)
+        lbl_category.TabIndex = 1
+        lbl_category.Text = "CATEGORY"
         ' 
-        ' Label2
+        ' lbl_location
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.ForeColor = Color.Fuchsia
-        Label2.Location = New Point(115, 43)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(89, 21)
-        Label2.TabIndex = 0
-        Label2.Text = "LOCATION"
+        lbl_location.AutoSize = True
+        lbl_location.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        lbl_location.ForeColor = Color.Fuchsia
+        lbl_location.Location = New Point(115, 43)
+        lbl_location.Name = "lbl_location"
+        lbl_location.Size = New Size(89, 21)
+        lbl_location.TabIndex = 0
+        lbl_location.Text = "LOCATION"
         ' 
         ' Panel3
         ' 
@@ -183,11 +183,11 @@ Partial Class Bill_house
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents lbl_deposit As Label
+    Friend WithEvents lbl_rent As Label
+    Friend WithEvents lbl_category As Label
+    Friend WithEvents lbl_location As Label
+    Friend WithEvents chkbox_include_deposit As CheckBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button1 As Button
 End Class
