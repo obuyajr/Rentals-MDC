@@ -219,6 +219,7 @@ Public Class House_Renting
 
     '
     Private Sub UpdateGrid()
+
         ' Get the selected values from the ComboBoxes
         Dim selectedCategory As String = combo_category.SelectedItem.ToString()
         Dim selectedLocation As String = combo_location.SelectedItem.ToString()
@@ -251,8 +252,7 @@ Public Class House_Renting
             DataGridView1.DataSource = dataTable
         End Using
 
-        ' Attach the CellContentClick event handler to the DataGridView
-        'AddHandler DataGridView1.CellContentClick, AddressOf DataGridView1_CellContentClick
+
     End Sub
 
 

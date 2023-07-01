@@ -4,6 +4,9 @@
     <Compile Update="admin_dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Bill_house.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="editHouse.vb">
       <SubType>Form</SubType>
     </Compile>
