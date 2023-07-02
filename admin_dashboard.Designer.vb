@@ -36,12 +36,14 @@ Partial Class admin_dashboard
         Button2 = New Button()
         Panel2 = New Panel()
         Panel3 = New Panel()
+        btn_billHouse = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.Indigo
+        Panel1.Controls.Add(btn_billHouse)
         Panel1.Controls.Add(lbl_uname)
         Panel1.Controls.Add(Button9)
         Panel1.Controls.Add(Button5)
@@ -240,6 +242,22 @@ Partial Class admin_dashboard
         Panel3.Size = New Size(746, 616)
         Panel3.TabIndex = 2
         ' 
+        ' btn_billHouse
+        ' 
+        btn_billHouse.FlatAppearance.BorderColor = Color.Indigo
+        btn_billHouse.FlatStyle = FlatStyle.Flat
+        btn_billHouse.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btn_billHouse.ForeColor = Color.White
+        btn_billHouse.Image = My.Resources.Resources.reset_regular_24
+        btn_billHouse.ImageAlign = ContentAlignment.MiddleRight
+        btn_billHouse.Location = New Point(8, 374)
+        btn_billHouse.Name = "btn_billHouse"
+        btn_billHouse.Size = New Size(131, 40)
+        btn_billHouse.TabIndex = 12
+        btn_billHouse.Text = "Bill House"
+        btn_billHouse.TextAlign = ContentAlignment.MiddleLeft
+        btn_billHouse.UseVisualStyleBackColor = True
+        ' 
         ' admin_dashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -272,4 +290,5 @@ Partial Class admin_dashboard
     Friend WithEvents Button5 As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents lbl_uname As Label
+    Friend WithEvents btn_billHouse As Button
 End Class

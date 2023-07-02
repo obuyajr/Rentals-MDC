@@ -77,5 +77,8 @@
 
     End Sub
 
-
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles btn_billHouse.Click
+        Dim billHouse As New Bill_house()
+        switchPanel(billHouse)
+    End Sub
 End Class

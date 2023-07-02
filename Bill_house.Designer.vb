@@ -46,7 +46,7 @@ Partial Class Bill_house
         Panel1.Controls.Add(ComboBox1)
         Panel1.Location = New Point(12, 56)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(315, 273)
+        Panel1.Size = New Size(315, 100)
         Panel1.TabIndex = 0
         ' 
         ' Label1
@@ -162,7 +162,7 @@ Partial Class Bill_house
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.PeachPuff
+        BackColor = Color.SeaShell
         ClientSize = New Size(838, 469)
         Controls.Add(Panel3)
         Controls.Add(Panel2)

@@ -36,3 +36,4 @@ C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rent
 C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.reports.resources
 C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.resetHouse.resources
 C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.Form2.resources
+C:\Users\felix\OneDrive\Desktop\VB net\Rentals-MDC\obj\Debug\net6.0-windows\Rentals_MDC.Bill_house.resources
