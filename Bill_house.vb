@@ -55,7 +55,7 @@ Public Class Bill_house
                 Dim updateCommand As New SqlCommand("UPDATE House_accounts SET MonthlyRent = @MonthlyRent, Deposit = @Deposit, TotalAmount = @TotalAmount WHERE HouseName = @HouseName", connection)
 
                 ' Set the parameter values
-                updateCommand.Parameters.AddWithValue("@HouseName", HouseName)
+                ' updateCommand.Parameters.AddWithValue("@HouseName", HouseName)
                 updateCommand.Parameters.AddWithValue("@MonthlyRent", lbl_rent)
                 updateCommand.Parameters.AddWithValue("@Deposit", lbl_deposit)
                 updateCommand.Parameters.AddWithValue("@TotalAmount", totalAmount)

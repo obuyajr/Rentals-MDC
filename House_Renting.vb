@@ -146,39 +146,10 @@ Public Class House_Renting
 
     Private Sub btn_generate_Click(sender As Object, e As EventArgs) Handles btn_generate.Click
 
-        '' Get the selected values from the ComboBoxes
-        'Dim selectedCategory As String = combo_category.SelectedItem.ToString()
-        'Dim selectedLocation As String = combo_location.SelectedItem.ToString()
-        'Dim selectedStatus As String = combo_status.SelectedItem.ToString()
 
-        '' SQL query to fetch data from the table based on the selected values
-        'Dim query As String = "SELECT * FROM houses WHERE category = @category AND location = @location AND status = @status"
-
-        '' Create a command with the query and parameterize the values
-        'Using cmd As New SqlCommand(query, con)
-        '    cmd.Parameters.AddWithValue("@category", selectedCategory)
-        '    cmd.Parameters.AddWithValue("@location", selectedLocation)
-        '    cmd.Parameters.AddWithValue("@status", selectedStatus)
-
-        '    ' Create a DataTable to store the fetched data
-        '    Dim dataTable As New DataTable()
-
-        '    ' Create a SqlDataAdapter to fill the DataTable with the query results
-        '    Using adapter As New SqlDataAdapter(cmd)
-        '        adapter.Fill(dataTable)
-
-        '        ' Add the checkbox column to the DataGridView
-        '        Dim checkBoxColumn As New DataGridViewCheckBoxColumn()
-        '        checkBoxColumn.Name = "Select"
-        '        checkBoxColumn.HeaderText = "Select"
-        '        DataGridView1.Columns.Add(checkBoxColumn)
-
-        '    End Using
-
-        '    ' Set the DataTable as the data source for the DataGridView
-        '    DataGridView1.DataSource = dataTable
-        'End Using
-
+        ' Clear the DataGridView
+        DataGridView1.Columns.Clear()
+        DataGridView1.DataSource = Nothing
 
         '
         ' Get the selected values from the ComboBoxes
@@ -295,7 +266,7 @@ Public Class House_Renting
                 ' If the checkbox is unchecked, clear the TextBox
                 txt_houseNo.Text = ""
                 txt_location.Text = ""
-                combo_category.Text = ""
+                txt_category.Text = ""
                 txt_deposit.Text = ""
                 txt_rent.Text = ""
                 txt_status.Text = ""
