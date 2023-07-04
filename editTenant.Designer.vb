@@ -293,10 +293,11 @@ Partial Class editTenant
         Controls.Add(txt_searchbox)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "editTenant"
+        ShowIcon = False
         StartPosition = FormStartPosition.Manual
-        Text = "editTenant"
+        Text = "Edit Tenant"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()

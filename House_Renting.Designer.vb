@@ -51,6 +51,8 @@ Partial Class House_Renting
         Label6 = New Label()
         Label5 = New Label()
         Panel5 = New Panel()
+        txt_total_amount = New TextBox()
+        Label20 = New Label()
         Label18 = New Label()
         rd_btn1 = New RadioButton()
         txt_nok_phone = New TextBox()
@@ -69,8 +71,6 @@ Partial Class House_Renting
         Label15 = New Label()
         Label16 = New Label()
         txt_idno = New TextBox()
-        Label20 = New Label()
-        txt_total_amount = New TextBox()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -122,7 +122,7 @@ Partial Class House_Renting
         btn_generate.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         btn_generate.Location = New Point(322, 59)
         btn_generate.Name = "btn_generate"
-        btn_generate.Size = New Size(95, 38)
+        btn_generate.Size = New Size(106, 38)
         btn_generate.TabIndex = 5
         btn_generate.Text = "Generate"
         btn_generate.UseVisualStyleBackColor = False
@@ -401,6 +401,24 @@ Partial Class House_Renting
         Panel5.Size = New Size(476, 393)
         Panel5.TabIndex = 2
         ' 
+        ' txt_total_amount
+        ' 
+        txt_total_amount.Font = New Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txt_total_amount.Location = New Point(111, 347)
+        txt_total_amount.Name = "txt_total_amount"
+        txt_total_amount.Size = New Size(127, 35)
+        txt_total_amount.TabIndex = 22
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Font = New Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label20.Location = New Point(9, 350)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(82, 30)
+        Label20.TabIndex = 21
+        Label20.Text = "TOTAL"
+        ' 
         ' Label18
         ' 
         Label18.AutoSize = True
@@ -567,24 +585,6 @@ Partial Class House_Renting
         txt_idno.Size = New Size(163, 25)
         txt_idno.TabIndex = 10
         ' 
-        ' Label20
-        ' 
-        Label20.AutoSize = True
-        Label20.Font = New Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label20.Location = New Point(9, 350)
-        Label20.Name = "Label20"
-        Label20.Size = New Size(82, 30)
-        Label20.TabIndex = 21
-        Label20.Text = "TOTAL"
-        ' 
-        ' txt_total_amount
-        ' 
-        txt_total_amount.Font = New Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point)
-        txt_total_amount.Location = New Point(111, 347)
-        txt_total_amount.Name = "txt_total_amount"
-        txt_total_amount.Size = New Size(127, 35)
-        txt_total_amount.TabIndex = 22
-        ' 
         ' House_Renting
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -594,8 +594,9 @@ Partial Class House_Renting
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "House_Renting"
+        ShowIcon = False
         Text = "House_Renting"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)

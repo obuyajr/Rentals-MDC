@@ -24,6 +24,8 @@ Partial Class newHouse
     Private Sub InitializeComponent()
         Button1 = New Button()
         Panel1 = New Panel()
+        combo_status = New ComboBox()
+        Label3 = New Label()
         Panel3 = New Panel()
         DataGridView1 = New DataGridView()
         combo_category = New ComboBox()
@@ -41,8 +43,6 @@ Partial Class newHouse
         MenuStrip1 = New MenuStrip()
         AdditionalRunningsToolStripMenuItem = New ToolStripMenuItem()
         AddCategoryOfHousesToolStripMenuItem = New ToolStripMenuItem()
-        combo_status = New ComboBox()
-        Label3 = New Label()
         Panel1.SuspendLayout()
         Panel3.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +83,26 @@ Partial Class newHouse
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(820, 400)
         Panel1.TabIndex = 1
+        ' 
+        ' combo_status
+        ' 
+        combo_status.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        combo_status.FormattingEnabled = True
+        combo_status.Items.AddRange(New Object() {"AVAILABLE"})
+        combo_status.Location = New Point(210, 331)
+        combo_status.Name = "combo_status"
+        combo_status.Size = New Size(133, 25)
+        combo_status.TabIndex = 15
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(105, 339)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(46, 17)
+        Label3.TabIndex = 14
+        Label3.Text = "Status"
         ' 
         ' Panel3
         ' 
@@ -246,26 +266,6 @@ Partial Class newHouse
         AddCategoryOfHousesToolStripMenuItem.Size = New Size(221, 22)
         AddCategoryOfHousesToolStripMenuItem.Text = "Add Category of Houses"
         ' 
-        ' combo_status
-        ' 
-        combo_status.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        combo_status.FormattingEnabled = True
-        combo_status.Items.AddRange(New Object() {"AVAILABLE"})
-        combo_status.Location = New Point(210, 331)
-        combo_status.Name = "combo_status"
-        combo_status.Size = New Size(133, 25)
-        combo_status.TabIndex = 15
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.Location = New Point(105, 339)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(46, 17)
-        Label3.TabIndex = 14
-        Label3.Text = "Status"
-        ' 
         ' newHouse
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -276,11 +276,12 @@ Partial Class newHouse
         Controls.Add(Panel1)
         Controls.Add(Panel2)
         Controls.Add(MenuStrip1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         MainMenuStrip = MenuStrip1
         Name = "newHouse"
+        ShowIcon = False
         StartPosition = FormStartPosition.Manual
-        Text = "newHouse"
+        Text = "New House"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()

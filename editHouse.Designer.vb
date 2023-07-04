@@ -230,10 +230,11 @@ Partial Class editHouse
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1209, 568)
         Controls.Add(Panel1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "editHouse"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
-        Text = "editHouse"
+        Text = "Edit House"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
         Panel2.ResumeLayout(False)

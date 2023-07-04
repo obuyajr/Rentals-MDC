@@ -281,10 +281,11 @@ Partial Class newTenant
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "newTenant"
+        ShowIcon = False
         StartPosition = FormStartPosition.Manual
-        Text = "newTenant"
+        Text = "New Tenant"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()

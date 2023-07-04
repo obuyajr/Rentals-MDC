@@ -74,16 +74,15 @@ Partial Class Form1
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
-        Panel2.BorderStyle = BorderStyle.FixedSingle
         Panel2.Controls.Add(combo_utype)
         Panel2.Controls.Add(txt_pwd)
         Panel2.Controls.Add(txt_uname)
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(-22, 101)
+        Panel2.Location = New Point(12, 108)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(430, 197)
+        Panel2.Size = New Size(358, 181)
         Panel2.TabIndex = 1
         ' 
         ' combo_utype
@@ -93,7 +92,7 @@ Partial Class Form1
         combo_utype.Items.AddRange(New Object() {"USER", "ADMIN"})
         combo_utype.Location = New Point(156, 102)
         combo_utype.Name = "combo_utype"
-        combo_utype.Size = New Size(136, 23)
+        combo_utype.Size = New Size(173, 23)
         combo_utype.TabIndex = 5
         ' 
         ' txt_pwd
@@ -167,6 +166,7 @@ Partial Class Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
         ClientSize = New Size(385, 393)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
